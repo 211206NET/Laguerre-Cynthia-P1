@@ -1,0 +1,291 @@
+2022-01-11 20:32:40.144 -05:00 [INF] An lineitem with id 5299 and quantity 4 was add to Cart.
+2022-01-11 20:32:50.260 -05:00 [INF] An lineitem with id 3555 and quantity 5 was add to Cart.
+2022-01-11 20:33:04.158 -05:00 [INF] An order item with id 66282 store Id 9464 and customer Id 61423 of amount 31.30 was added.
+2022-01-11 20:44:45.973 -05:00 [INF] A customer with ID 42492 and name Jimmy was added
+2022-01-11 20:45:24.381 -05:00 [INF] A customer with ID 54 and name jimm was added
+2022-01-11 20:45:43.237 -05:00 [INF] An lineitem with id 4350 and quantity 5 was add to Cart.
+2022-01-11 20:45:49.714 -05:00 [INF] An lineitem with id 6416 and quantity 6 was add to Cart.
+2022-01-11 20:45:51.297 -05:00 [INF] Line Item with ID 4350 order ID was changed to 55346
+2022-01-11 20:45:51.332 -05:00 [INF] Line Item with ID 6416 order ID was changed to 55346
+2022-01-11 20:45:51.373 -05:00 [INF] An order item with id 55346 store Id 9464 and customer Id 54 of amount 38.20 was added.
+2022-01-11 20:46:26.573 -05:00 [INF] An lineitem with id 3704 and quantity 10 was add to Cart.
+2022-01-11 20:46:40.395 -05:00 [INF] An lineitem with id 3042 and quantity 5 was add to Cart.
+2022-01-11 20:46:43.543 -05:00 [INF] Line Item with ID 3704 order ID was changed to 41064
+2022-01-11 20:46:43.580 -05:00 [INF] Line Item with ID 3042 order ID was changed to 41064
+2022-01-11 20:46:43.617 -05:00 [INF] An order item with id 41064 store Id 9464 and customer Id 54 of amount 52.25 was added.
+2022-01-11 20:48:45.674 -05:00 [INF] An product with id 51737 name Red Wool Yarn that costs 3.50 was added.
+2022-01-11 20:48:48.671 -05:00 [INF] An inventory item with id 51738 store Id 24183 and product name Wool Yarn of amount 25 was added.
+2022-01-11 20:49:01.492 -05:00 [INF] Going outside the selection range
+2022-01-11 20:49:05.863 -05:00 [INF] The item with Inventory ID 51738 was increase to Quantity 30
+2022-01-11 20:49:33.591 -05:00 [INF] An product with id 8669 name Breatheable and wonderful Cotton Yarn that costs 4.50 was added.
+2022-01-11 20:49:37.846 -05:00 [INF] An inventory item with id 8670 store Id 24183 and product name Cotton Yarn of amount 20 was added.
+2022-01-11 20:50:30.645 -05:00 [INF] An product with id 28865 name Purple Silky Yarn that costs 5.00 was added.
+2022-01-11 20:50:33.510 -05:00 [INF] An inventory item with id 28866 store Id 38836 and product name Silky Yarn of amount 20 was added.
+2022-01-11 20:50:53.815 -05:00 [INF] An product with id 28550 name Blue Thick Yarn that costs 5.40 was added.
+2022-01-11 20:50:58.114 -05:00 [INF] An inventory item with id 28551 store Id 38836 and product name Thick Yarn of amount 15 was added.
+2022-01-11 20:52:07.979 -05:00 [INF] An product with id 683 name blue Yarn that costs 2.00 was added.
+2022-01-11 20:52:10.803 -05:00 [INF] An inventory item with id 684 store Id 63669 and product name Yarn of amount 15 was added.
+2022-01-11 20:55:02.652 -05:00 [INF] A customer with ID 34693 and name Erica was added
+2022-01-11 20:55:44.102 -05:00 [INF] An lineitem with id 9391 and quantity 5 was add to Cart.
+2022-01-11 20:55:54.855 -05:00 [INF] An lineitem with id 8070 and quantity 2 was add to Cart.
+2022-01-11 20:56:04.399 -05:00 [INF] Line Item with ID 9391 order ID was changed to 14105
+2022-01-11 20:56:04.434 -05:00 [INF] Line Item with ID 8070 order ID was changed to 14105
+2022-01-11 20:56:04.706 -05:00 [INF] An order item with id 14105 store Id 24183 and customer Id 34693 of amount 29.50 was added.
+2022-01-11 20:58:50.699 -05:00 [INF] An product with id 48247 name dark red silky that costs 4.00 was added.
+2022-01-11 20:59:00.808 -05:00 [INF] An inventory item with id 48248 store Id 63669 and product name silky of amount 15 was added.
+2022-01-11 20:59:44.132 -05:00 [INF] Going outside the selection range
+2022-01-11 20:59:44.133 -05:00 [INF] Going outside the selection range
+2022-01-11 20:59:49.418 -05:00 [INF] The item with Inventory ID 48248 was increase to Quantity 20
+2022-01-11 21:14:26.112 -05:00 [INF] A store  with Id 62990 store name Hartford's CYF was added.
+2022-01-11 21:14:48.961 -05:00 [INF] A store  with Id 70594 store name Stratford's CYF was added.
+2022-01-11 21:15:38.833 -05:00 [INF] An product with id 96347 name Bright Pink Wool Yarn that costs 3.50 was added.
+2022-01-11 21:15:40.856 -05:00 [INF] An inventory item with id 96348 store Id 62990 and product name Wool Yarn of amount 15 was added.
+2022-01-11 21:16:44.768 -05:00 [INF] An product with id 53139 name Fuscha Silky Yarn that costs 4.00 was added.
+2022-01-11 21:16:47.102 -05:00 [INF] An inventory item with id 53140 store Id 62990 and product name Silky Yarn of amount 15 was added.
+2022-01-11 21:16:54.872 -05:00 [INF] Going outside the selection range
+2022-01-11 21:16:54.874 -05:00 [INF] Going outside the selection range
+2022-01-11 21:16:58.962 -05:00 [INF] The item with Inventory ID 53140 was increase to Quantity 20
+2022-01-11 21:17:38.441 -05:00 [INF] An product with id 25995 name breathable and easy to use. 200 grams Cotton Yarn that costs 2.75 was added.
+2022-01-11 21:17:41.014 -05:00 [INF] An inventory item with id 25996 store Id 70594 and product name Cotton Yarn of amount 20 was added.
+2022-01-11 21:18:18.323 -05:00 [INF] An product with id 98551 name Royal Blue Chucky Yarn that costs 4.00 was added.
+2022-01-11 21:18:21.735 -05:00 [INF] An inventory item with id 98552 store Id 70594 and product name Chucky Yarn of amount 15 was added.
+2022-01-11 21:18:40.141 -05:00 [INF] A customer with ID 57030 and name Cynthia was added
+2022-01-11 21:18:49.541 -05:00 [INF] An lineitem with id 6506 and quantity 2 was add to Cart.
+2022-01-11 21:18:54.952 -05:00 [INF] An lineitem with id 3855 and quantity 5 was add to Cart.
+2022-01-11 21:18:56.773 -05:00 [INF] Line Item with ID 6506 order ID was changed to 89178
+2022-01-11 21:18:56.808 -05:00 [INF] Line Item with ID 3855 order ID was changed to 89178
+2022-01-11 21:18:56.852 -05:00 [INF] An order item with id 89178 store Id 62990 and customer Id 57030 of amount 25.50 was added.
+2022-01-11 21:19:05.949 -05:00 [INF] An lineitem with id 9711 and quantity 1 was add to Cart.
+2022-01-11 21:19:09.233 -05:00 [INF] Line Item with ID 9711 order ID was changed to 59608
+2022-01-11 21:19:09.276 -05:00 [INF] An order item with id 59608 store Id 62990 and customer Id 57030 of amount 4.00 was added.
+2022-01-11 21:19:34.919 -05:00 [INF] An lineitem with id 4022 and quantity 5 was add to Cart.
+2022-01-11 21:19:40.630 -05:00 [INF] An lineitem with id 2371 and quantity 4 was add to Cart.
+2022-01-11 21:19:43.018 -05:00 [INF] Line Item with ID 4022 order ID was changed to 44937
+2022-01-11 21:19:43.054 -05:00 [INF] Line Item with ID 2371 order ID was changed to 44937
+2022-01-11 21:19:43.095 -05:00 [INF] An order item with id 44937 store Id 70594 and customer Id 57030 of amount 29.75 was added.
+2022-01-11 21:20:21.435 -05:00 [INF] A customer with ID 15900 and name Hilleny was added
+2022-01-11 21:20:43.962 -05:00 [INF] An lineitem with id 2956 and quantity 5 was add to Cart.
+2022-01-11 21:20:50.416 -05:00 [INF] An lineitem with id 4041 and quantity 8 was add to Cart.
+2022-01-11 21:20:51.834 -05:00 [INF] Line Item with ID 2956 order ID was changed to 99290
+2022-01-11 21:20:51.868 -05:00 [INF] Line Item with ID 4041 order ID was changed to 99290
+2022-01-11 21:20:51.907 -05:00 [INF] An order item with id 99290 store Id 62990 and customer Id 15900 of amount 48.00 was added.
+2022-01-11 21:21:07.067 -05:00 [INF] An lineitem with id 1992 and quantity 10 was add to Cart.
+2022-01-11 21:21:16.645 -05:00 [INF] An lineitem with id 8183 and quantity 3 was add to Cart.
+2022-01-11 21:21:21.533 -05:00 [INF] Line Item with ID 1992 order ID was changed to 3492
+2022-01-11 21:21:21.570 -05:00 [INF] Line Item with ID 8183 order ID was changed to 3492
+2022-01-11 21:21:21.611 -05:00 [INF] An order item with id 3492 store Id 70594 and customer Id 15900 of amount 48.25 was added.
+2022-01-11 22:47:25.416 -05:00 [INF] A customer with ID 43783 and name Zeinab was added
+2022-01-11 22:47:49.831 -05:00 [INF] An lineitem with id 2052 and quantity 4 was add to Cart.
+2022-01-11 22:47:58.342 -05:00 [INF] An lineitem with id 6793 and quantity 5 was add to Cart.
+2022-01-11 22:48:01.184 -05:00 [INF] Line Item with ID 2052 order ID was changed to 88953
+2022-01-11 22:48:01.227 -05:00 [INF] Line Item with ID 6793 order ID was changed to 88953
+2022-01-11 22:48:01.269 -05:00 [INF] An order item with id 88953 store Id 62990 and customer Id 43783 of amount 33.50 was added.
+2022-01-11 22:49:08.526 -05:00 [INF] An lineitem with id 8412 and quantity 5 was add to Cart.
+2022-01-11 22:49:17.723 -05:00 [INF] An lineitem with id 8087 and quantity 2 was add to Cart.
+2022-01-11 22:49:20.684 -05:00 [INF] Line Item with ID 8412 order ID was changed to 29759
+2022-01-11 22:49:20.717 -05:00 [INF] Line Item with ID 8087 order ID was changed to 29759
+2022-01-11 22:49:20.947 -05:00 [INF] An order item with id 29759 store Id 70594 and customer Id 43783 of amount 21.75 was added.
+2022-01-11 22:50:42.526 -05:00 [INF] An product with id 13306 name Navy Blue Yarn that costs 3.50 was added.
+2022-01-11 22:50:46.155 -05:00 [INF] An inventory item with id 13307 store Id 62990 and product name Yarn of amount 25 was added.
+2022-01-11 22:51:12.925 -05:00 [INF] The item with Inventory ID 96348 was increase to Quantity 25
+2022-01-11 22:51:55.519 -05:00 [INF] A store  with Id 38821 store name White Plain's CYF was added.
+2022-01-12 00:18:21.476 -05:00 [INF] A store  with Id 74029 store name Hartford's CYF was added.
+2022-01-12 00:18:54.932 -05:00 [INF] A store  with Id 76260 store name Stratford's CYF was added.
+2022-01-12 00:19:32.200 -05:00 [INF] A store  with Id 24223 store name White Plain's CYF was added.
+2022-01-12 00:21:27.546 -05:00 [INF] An product with id 2266 name Bright Pink Wool Yarn that costs 3.50 was added.
+2022-01-12 00:21:30.497 -05:00 [INF] An inventory item with id 2267 store Id 24223 and product name Wool Yarn of amount 20 was added.
+2022-01-12 00:22:27.532 -05:00 [INF] An product with id 2267 name Light Blue Silky Yarn that costs 4.00 was added.
+2022-01-12 00:22:30.020 -05:00 [INF] An inventory item with id 2268 store Id 24223 and product name Silky Yarn of amount 25 was added.
+2022-01-12 00:23:02.549 -05:00 [INF] An product with id 4997 name Light Green Cotton Yarn that costs 3.50 was added.
+2022-01-12 00:23:05.183 -05:00 [INF] An inventory item with id 4998 store Id 24223 and product name Cotton Yarn of amount 15 was added.
+2022-01-12 00:23:29.386 -05:00 [INF] An product with id 94003 name Green  Wool Yarn that costs 4.0 was added.
+2022-01-12 00:23:33.488 -05:00 [INF] An inventory item with id 94004 store Id 74029 and product name Wool Yarn of amount 10 was added.
+2022-01-12 00:24:15.189 -05:00 [INF] An product with id 49493 name Red Chunky Yarn that costs 3.00 was added.
+2022-01-12 00:24:17.403 -05:00 [INF] An inventory item with id 49494 store Id 74029 and product name Chunky Yarn of amount 20 was added.
+2022-01-12 00:24:54.558 -05:00 [INF] An product with id 71580 name Rainbow Threading Yarn that costs 3.25 was added.
+2022-01-12 00:24:57.188 -05:00 [INF] An inventory item with id 71581 store Id 74029 and product name Threading Yarn of amount 10 was added.
+2022-01-12 00:25:25.647 -05:00 [INF] An product with id 30724 name Green Yarn that costs 2.40 was added.
+2022-01-12 00:25:27.918 -05:00 [INF] An inventory item with id 30725 store Id 76260 and product name Yarn of amount 20 was added.
+2022-01-12 00:25:39.059 -05:00 [INF] An product with id 88781 name pink Yarn that costs 3.45 was added.
+2022-01-12 00:25:40.890 -05:00 [INF] An inventory item with id 88782 store Id 76260 and product name Yarn of amount 20 was added.
+2022-01-12 00:26:10.145 -05:00 [INF] An product with id 9362 name Purple Yarn that costs 3.45 was added.
+2022-01-12 00:26:15.717 -05:00 [INF] An inventory item with id 9363 store Id 76260 and product name Yarn of amount 20 was added.
+2022-01-12 00:26:45.085 -05:00 [INF] A customer with ID 3282 and name Cynthia was added
+2022-01-12 00:27:20.798 -05:00 [INF] An lineitem with id 1538 and quantity 4 was add to Cart.
+2022-01-12 00:27:35.562 -05:00 [INF] An lineitem with id 1059 and quantity 5 was add to Cart.
+2022-01-12 00:27:38.656 -05:00 [INF] Line Item with ID 1538 order ID was changed to 36756
+2022-01-12 00:27:38.691 -05:00 [INF] Line Item with ID 1059 order ID was changed to 36756
+2022-01-12 00:27:38.736 -05:00 [INF] An order item with id 36756 store Id 24223 and customer Id 3282 of amount 31.50 was added.
+2022-01-12 00:27:56.178 -05:00 [INF] An lineitem with id 8541 and quantity 2 was add to Cart.
+2022-01-12 00:28:00.933 -05:00 [INF] An lineitem with id 978 and quantity 3 was add to Cart.
+2022-01-12 00:28:09.777 -05:00 [INF] An lineitem with id 7254 and quantity 8 was add to Cart.
+2022-01-12 00:28:19.057 -05:00 [INF] Line Item with ID 8541 order ID was changed to 39843
+2022-01-12 00:28:19.091 -05:00 [INF] Line Item with ID 978 order ID was changed to 39843
+2022-01-12 00:28:19.131 -05:00 [INF] Line Item with ID 7254 order ID was changed to 39843
+2022-01-12 00:28:19.172 -05:00 [INF] An order item with id 39843 store Id 74029 and customer Id 3282 of amount 47.75 was added.
+2022-01-12 00:28:37.936 -05:00 [INF] A customer with ID 39879 and name Stella was added
+2022-01-12 00:28:47.605 -05:00 [INF] An lineitem with id 5402 and quantity 4 was add to Cart.
+2022-01-12 00:28:54.889 -05:00 [INF] An lineitem with id 8597 and quantity 3 was add to Cart.
+2022-01-12 00:29:07.949 -05:00 [INF] An lineitem with id 1935 and quantity 4 was add to Cart.
+2022-01-12 00:29:14.133 -05:00 [INF] Line Item with ID 5402 order ID was changed to 15129
+2022-01-12 00:29:14.168 -05:00 [INF] Line Item with ID 8597 order ID was changed to 15129
+2022-01-12 00:29:14.202 -05:00 [INF] Line Item with ID 1935 order ID was changed to 15129
+2022-01-12 00:29:14.242 -05:00 [INF] An order item with id 15129 store Id 24223 and customer Id 39879 of amount 40.00 was added.
+2022-01-12 00:29:26.702 -05:00 [INF] An lineitem with id 3597 and quantity 4 was add to Cart.
+2022-01-12 00:29:32.024 -05:00 [INF] An lineitem with id 7819 and quantity 5 was add to Cart.
+2022-01-12 00:29:33.248 -05:00 [INF] Line Item with ID 3597 order ID was changed to 18205
+2022-01-12 00:29:33.285 -05:00 [INF] Line Item with ID 7819 order ID was changed to 18205
+2022-01-12 00:29:33.324 -05:00 [INF] An order item with id 18205 store Id 76260 and customer Id 39879 of amount 25.80 was added.
+2022-01-12 00:30:26.420 -05:00 [INF] An lineitem with id 9208 and quantity 6 was add to Cart.
+2022-01-12 00:30:44.841 -05:00 [INF] An lineitem with id 887 and quantity 4 was add to Cart.
+2022-01-12 00:30:49.470 -05:00 [INF] Line Item with ID 9208 order ID was changed to 74162
+2022-01-12 00:30:49.504 -05:00 [INF] Line Item with ID 887 order ID was changed to 74162
+2022-01-12 00:30:49.547 -05:00 [INF] An order item with id 74162 store Id 74029 and customer Id 39879 of amount 36.00 was added.
+2022-01-12 00:34:17.851 -05:00 [INF] A customer with ID 85587 and name Anne Marie was added
+2022-01-12 00:34:41.216 -05:00 [INF] An lineitem with id 4557 and quantity 4 was add to Cart.
+2022-01-12 00:34:50.668 -05:00 [INF] An lineitem with id 1026 and quantity 5 was add to Cart.
+2022-01-12 00:35:01.880 -05:00 [INF] An lineitem with id 7574 and quantity 5 was add to Cart.
+2022-01-12 00:35:04.984 -05:00 [INF] Line Item with ID 4557 order ID was changed to 19116
+2022-01-12 00:35:05.021 -05:00 [INF] Line Item with ID 1026 order ID was changed to 19116
+2022-01-12 00:35:05.057 -05:00 [INF] Line Item with ID 7574 order ID was changed to 19116
+2022-01-12 00:35:05.100 -05:00 [INF] An order item with id 19116 store Id 74029 and customer Id 85587 of amount 48.25 was added.
+2022-01-12 00:35:33.511 -05:00 [INF] An lineitem with id 9371 and quantity 5 was add to Cart.
+2022-01-12 00:35:39.256 -05:00 [INF] An lineitem with id 138 and quantity 3 was add to Cart.
+2022-01-12 00:35:40.872 -05:00 [INF] Line Item with ID 9371 order ID was changed to 75646
+2022-01-12 00:35:41.231 -05:00 [INF] Line Item with ID 138 order ID was changed to 75646
+2022-01-12 00:35:41.272 -05:00 [INF] An order item with id 75646 store Id 76260 and customer Id 85587 of amount 27.60 was added.
+2022-01-12 00:37:18.592 -05:00 [INF] A store  with Id 87745 store name Hartsdale's CYF was added.
+2022-01-12 00:38:08.293 -05:00 [INF] An product with id 24064 name Navy Blue Wool Yarn that costs 4.50 was added.
+2022-01-12 00:38:10.629 -05:00 [INF] An inventory item with id 24065 store Id 76260 and product name Wool Yarn of amount 20 was added.
+2022-01-12 00:38:34.516 -05:00 [INF] The item with Inventory ID 30725 was increase to Quantity 20
+2022-01-12 00:38:43.987 -05:00 [INF] The item with Inventory ID 30725 was increase to Quantity 30
+2022-01-12 00:41:31.698 -05:00 [INF] A store  with Id 22963 store name Hartford's CYF was added.
+2022-01-12 00:42:39.039 -05:00 [INF] A store  with Id 47566 store name Stratford's CYF was added.
+2022-01-12 00:44:57.516 -05:00 [INF] A customer with ID 78878 and name Cynthia was added
+2022-01-12 00:46:12.901 -05:00 [INF] A customer with ID 98807 and name Jimmy was added
+2022-01-12 00:49:21.820 -05:00 [INF] A customer with ID 38614 and name Cynthia was added
+2022-01-12 00:51:36.821 -05:00 [INF] An product with id 86246 name green Wool Yarn that costs 2.45 was added.
+2022-01-12 00:51:39.164 -05:00 [INF] An inventory item with id 86247 store Id 22963 and product name Wool Yarn of amount 20 was added.
+2022-01-12 00:51:52.001 -05:00 [INF] An product with id 80179 name purple Silky Yarn that costs 4.50 was added.
+2022-01-12 00:51:54.596 -05:00 [INF] An inventory item with id 80180 store Id 22963 and product name Silky Yarn of amount 30 was added.
+2022-01-12 00:52:08.532 -05:00 [INF] An product with id 88388 name great Yarn that costs 3.4 was added.
+2022-01-12 00:52:11.464 -05:00 [INF] An inventory item with id 88389 store Id 22963 and product name Yarn of amount 25 was added.
+2022-01-12 00:52:54.412 -05:00 [INF] An product with id 6173 name purple Wool Yarn that costs 3.45 was added.
+2022-01-12 00:52:58.351 -05:00 [INF] An inventory item with id 6174 store Id 47566 and product name Wool Yarn of amount 25 was added.
+2022-01-12 00:53:13.139 -05:00 [INF] An product with id 28533 name Purple Yarn that costs 3.56 was added.
+2022-01-12 00:53:15.999 -05:00 [INF] An inventory item with id 28534 store Id 47566 and product name Yarn of amount 20 was added.
+2022-01-12 00:53:39.573 -05:00 [INF] An product with id 10402 name yellow yarn that costs 3.75 was added.
+2022-01-12 00:53:42.474 -05:00 [INF] An inventory item with id 10403 store Id 47566 and product name yarn of amount 30 was added.
+2022-01-12 00:53:55.472 -05:00 [INF] An product with id 63240 name pink Yarn that costs 2.0 was added.
+2022-01-12 00:54:00.341 -05:00 [INF] An inventory item with id 63241 store Id 47566 and product name Yarn of amount 40 was added.
+2022-01-12 00:55:05.175 -05:00 [INF] An lineitem with id 2429 and quantity 5 was add to Cart.
+2022-01-12 00:55:11.221 -05:00 [INF] An lineitem with id 9440 and quantity 5 was add to Cart.
+2022-01-12 00:56:10.316 -05:00 [INF] An lineitem with id 6706 and quantity 5 was add to Cart.
+2022-01-12 00:56:14.471 -05:00 [INF] An lineitem with id 9278 and quantity 4 was add to Cart.
+2022-01-12 00:56:19.310 -05:00 [INF] An lineitem with id 7137 and quantity 5 was add to Cart.
+2022-01-12 00:56:21.733 -05:00 [INF] Line Item with ID 6706 order ID was changed to 47415
+2022-01-12 00:56:21.770 -05:00 [INF] Line Item with ID 9278 order ID was changed to 47415
+2022-01-12 00:56:21.805 -05:00 [INF] Line Item with ID 7137 order ID was changed to 47415
+2022-01-12 00:56:21.864 -05:00 [INF] An order item with id 47415 store Id 22963 and customer Id 38614 of amount 49.30 was added.
+2022-01-12 00:57:25.329 -05:00 [INF] An lineitem with id 7546 and quantity 3 was add to Cart.
+2022-01-12 00:57:30.632 -05:00 [INF] An lineitem with id 6698 and quantity 4 was add to Cart.
+2022-01-12 00:57:37.108 -05:00 [INF] An lineitem with id 304 and quantity 10 was add to Cart.
+2022-01-12 00:57:45.001 -05:00 [INF] An lineitem with id 9233 and quantity 5 was add to Cart.
+2022-01-12 00:57:47.382 -05:00 [INF] Line Item with ID 7546 order ID was changed to 6526
+2022-01-12 00:57:47.418 -05:00 [INF] Line Item with ID 6698 order ID was changed to 6526
+2022-01-12 00:57:47.452 -05:00 [INF] Line Item with ID 304 order ID was changed to 6526
+2022-01-12 00:57:47.489 -05:00 [INF] Line Item with ID 9233 order ID was changed to 6526
+2022-01-12 00:57:47.529 -05:00 [INF] An order item with id 6526 store Id 47566 and customer Id 38614 of amount 70.95 was added.
+2022-01-12 00:58:01.720 -05:00 [INF] An lineitem with id 7108 and quantity 5 was add to Cart.
+2022-01-12 00:58:04.421 -05:00 [INF] Line Item with ID 7108 order ID was changed to 89929
+2022-01-12 00:58:04.460 -05:00 [INF] An order item with id 89929 store Id 22963 and customer Id 38614 of amount 22.50 was added.
+2022-01-12 00:58:35.364 -05:00 [INF] An lineitem with id 6255 and quantity 5 was add to Cart.
+2022-01-12 00:58:41.874 -05:00 [INF] An lineitem with id 9980 and quantity 4 was add to Cart.
+2022-01-12 00:58:43.290 -05:00 [INF] Line Item with ID 6255 order ID was changed to 51644
+2022-01-12 00:58:43.325 -05:00 [INF] Line Item with ID 9980 order ID was changed to 51644
+2022-01-12 00:58:43.365 -05:00 [INF] An order item with id 51644 store Id 47566 and customer Id 38614 of amount 24.24 was added.
+2022-01-12 00:59:18.253 -05:00 [INF] A customer with ID 12962 and name Anne  was added
+2022-01-12 00:59:30.927 -05:00 [INF] An lineitem with id 2635 and quantity 5 was add to Cart.
+2022-01-12 00:59:35.467 -05:00 [INF] An lineitem with id 9909 and quantity 3 was add to Cart.
+2022-01-12 00:59:41.879 -05:00 [INF] An lineitem with id 8805 and quantity 5 was add to Cart.
+2022-01-12 00:59:43.814 -05:00 [INF] Line Item with ID 2635 order ID was changed to 5050
+2022-01-12 00:59:43.849 -05:00 [INF] Line Item with ID 9909 order ID was changed to 5050
+2022-01-12 00:59:43.883 -05:00 [INF] Line Item with ID 8805 order ID was changed to 5050
+2022-01-12 00:59:43.922 -05:00 [INF] An order item with id 5050 store Id 22963 and customer Id 12962 of amount 46.85 was added.
+2022-01-12 01:00:00.054 -05:00 [INF] An lineitem with id 7554 and quantity 10 was add to Cart.
+2022-01-12 01:00:10.140 -05:00 [INF] An lineitem with id 9461 and quantity 5 was add to Cart.
+2022-01-12 01:00:11.853 -05:00 [INF] Line Item with ID 7554 order ID was changed to 11783
+2022-01-12 01:00:11.889 -05:00 [INF] Line Item with ID 9461 order ID was changed to 11783
+2022-01-12 01:00:11.929 -05:00 [INF] An order item with id 11783 store Id 47566 and customer Id 12962 of amount 38.75 was added.
+2022-01-12 01:01:54.459 -05:00 [INF] A customer with ID 84574 and name Jimmy was added
+2022-01-12 01:02:07.421 -05:00 [INF] An lineitem with id 1148 and quantity 2 was add to Cart.
+2022-01-12 01:02:11.794 -05:00 [INF] An lineitem with id 8163 and quantity 5 was add to Cart.
+2022-01-12 01:02:13.273 -05:00 [INF] Line Item with ID 1148 order ID was changed to 96361
+2022-01-12 01:02:13.309 -05:00 [INF] Line Item with ID 8163 order ID was changed to 96361
+2022-01-12 01:02:13.352 -05:00 [INF] An order item with id 96361 store Id 22963 and customer Id 84574 of amount 26.00 was added.
+2022-01-12 01:02:39.510 -05:00 [INF] An lineitem with id 6493 and quantity 4 was add to Cart.
+2022-01-12 01:02:44.388 -05:00 [INF] An lineitem with id 5951 and quantity 3 was add to Cart.
+2022-01-12 01:02:49.062 -05:00 [INF] An lineitem with id 420 and quantity 4 was add to Cart.
+2022-01-12 01:02:50.679 -05:00 [INF] Line Item with ID 6493 order ID was changed to 2755
+2022-01-12 01:02:50.715 -05:00 [INF] Line Item with ID 5951 order ID was changed to 2755
+2022-01-12 01:02:50.753 -05:00 [INF] Line Item with ID 420 order ID was changed to 2755
+2022-01-12 01:02:50.792 -05:00 [INF] An order item with id 2755 store Id 22963 and customer Id 38614 of amount 38.95 was added.
+2022-01-12 01:09:57.505 -05:00 [INF] A store  with Id 39440 store name Hartford's CYF was added.
+2022-01-12 01:10:21.727 -05:00 [INF] A store  with Id 29030 store name Stratford's CYF was added.
+2022-01-12 01:11:33.871 -05:00 [INF] A store  with Id 20718 store name Hartford's CYF was added.
+2022-01-12 01:12:30.392 -05:00 [INF] A store  with Id 92852 store name Stratford's CYF was added.
+2022-01-12 01:15:31.091 -05:00 [INF] An product with id 69050 name Red Wool Yarn that costs 5.50 was added.
+2022-01-12 01:15:34.439 -05:00 [INF] An inventory item with id 69051 store Id 20718 and product name Wool Yarn of amount 25 was added.
+2022-01-12 01:20:13.894 -05:00 [INF] A store  with Id 95305 store name White Plain's CYF was added.
+2022-01-12 01:21:25.975 -05:00 [INF] A store  with Id 28127 store name Hartford's CYF was added.
+2022-01-12 01:23:29.598 -05:00 [INF] A store  with Id 7492 store name Stratford's CYF was added.
+2022-01-12 01:24:46.085 -05:00 [INF] An product with id 21381 name Red Wool Yarn that costs 5.25 was added.
+2022-01-12 01:24:48.838 -05:00 [INF] An inventory item with id 21382 store Id 28127 and product name Wool Yarn of amount 20 was added.
+2022-01-12 01:25:45.795 -05:00 [INF] An product with id 79091 name Blue Cotton Yarn that costs 4.99 was added.
+2022-01-12 01:25:48.834 -05:00 [INF] An inventory item with id 79092 store Id 28127 and product name Cotton Yarn of amount 20 was added.
+2022-01-12 01:26:26.357 -05:00 [INF] An product with id 59914 name Purple Chunky Yarn that costs 4.50 was added.
+2022-01-12 01:26:44.764 -05:00 [INF] An inventory item with id 59915 store Id 28127 and product name Chunky Yarn of amount 25 was added.
+2022-01-12 01:29:06.831 -05:00 [INF] An product with id 1760 name Green Wool Yarn that costs 5.25 was added.
+2022-01-12 01:29:12.725 -05:00 [INF] An inventory item with id 1761 store Id 7492 and product name Wool Yarn of amount 30 was added.
+2022-01-12 01:31:26.436 -05:00 [INF] An product with id 53532 name Black Silky Yarn that costs 4.50 was added.
+2022-01-12 01:31:30.001 -05:00 [INF] An inventory item with id 53533 store Id 7492 and product name Silky Yarn of amount 25 was added.
+2022-01-12 01:32:56.504 -05:00 [INF] An product with id 64520 name Teal Chunky Yarn that costs 4.25 was added.
+2022-01-12 01:33:15.312 -05:00 [INF] An inventory item with id 64521 store Id 7492 and product name Chunky Yarn of amount 20 was added.
+2022-01-12 01:34:01.546 -05:00 [INF] The item with Inventory ID 64521 was increase to Quantity 22
+2022-01-12 01:34:35.599 -05:00 [INF] A customer with ID 63993 and name Cynthia was added
+2022-01-12 01:34:43.511 -05:00 [INF] An lineitem with id 4012 and quantity 4 was add to Cart.
+2022-01-12 01:34:49.411 -05:00 [INF] An lineitem with id 2767 and quantity 5 was add to Cart.
+2022-01-12 01:34:52.457 -05:00 [INF] Line Item with ID 4012 order ID was changed to 77617
+2022-01-12 01:34:52.492 -05:00 [INF] Line Item with ID 2767 order ID was changed to 77617
+2022-01-12 01:34:52.538 -05:00 [INF] An order item with id 77617 store Id 7492 and customer Id 63993 of amount 42.25 was added.
+2022-01-12 01:36:50.087 -05:00 [INF] A customer with ID 44800 and name Anne was added
+2022-01-12 01:36:58.807 -05:00 [INF] An lineitem with id 3084 and quantity 3 was add to Cart.
+2022-01-12 01:37:47.306 -05:00 [INF] An lineitem with id 6385 and quantity 3 was add to Cart.
+2022-01-12 01:37:57.735 -05:00 [INF] An lineitem with id 1872 and quantity 4 was add to Cart.
+2022-01-12 01:38:04.779 -05:00 [INF] An lineitem with id 7687 and quantity 5 was add to Cart.
+2022-01-12 01:38:07.107 -05:00 [INF] Line Item with ID 6385 order ID was changed to 12683
+2022-01-12 01:38:07.141 -05:00 [INF] Line Item with ID 1872 order ID was changed to 12683
+2022-01-12 01:38:07.391 -05:00 [INF] Line Item with ID 7687 order ID was changed to 12683
+2022-01-12 01:38:07.434 -05:00 [INF] An order item with id 12683 store Id 28127 and customer Id 44800 of amount 58.70 was added.
+2022-01-12 01:39:03.962 -05:00 [INF] An lineitem with id 254 and quantity 10 was add to Cart.
+2022-01-12 01:39:09.669 -05:00 [INF] An lineitem with id 8609 and quantity 4 was add to Cart.
+2022-01-12 01:39:11.092 -05:00 [INF] Line Item with ID 254 order ID was changed to 86604
+2022-01-12 01:39:11.128 -05:00 [INF] Line Item with ID 8609 order ID was changed to 86604
+2022-01-12 01:39:11.171 -05:00 [INF] An order item with id 86604 store Id 7492 and customer Id 44800 of amount 60.50 was added.
+2022-01-12 01:40:58.828 -05:00 [INF] An lineitem with id 3556 and quantity 10 was add to Cart.
+2022-01-12 01:41:06.811 -05:00 [INF] An lineitem with id 343 and quantity 5 was add to Cart.
+2022-01-12 01:41:24.443 -05:00 [INF] An lineitem with id 9718 and quantity 6 was add to Cart.
+2022-01-12 01:41:27.369 -05:00 [INF] Line Item with ID 3556 order ID was changed to 59962
+2022-01-12 01:41:27.404 -05:00 [INF] Line Item with ID 343 order ID was changed to 59962
+2022-01-12 01:41:27.439 -05:00 [INF] Line Item with ID 9718 order ID was changed to 59962
+2022-01-12 01:41:27.491 -05:00 [INF] An order item with id 59962 store Id 28127 and customer Id 63993 of amount 106.09 was added.
+2022-01-12 11:56:49.179 -05:00 [INF] A customer with ID 94780 and name Jimmy was added
+2022-01-12 11:57:09.835 -05:00 [INF] An lineitem with id 2509 and quantity 3 was add to Cart.
+2022-01-12 11:57:19.371 -05:00 [INF] An lineitem with id 9150 and quantity 5 was add to Cart.
+2022-01-12 11:57:20.515 -05:00 [INF] Line Item with ID 2509 order ID was changed to 13527
+2022-01-12 11:57:20.552 -05:00 [INF] Line Item with ID 9150 order ID was changed to 13527
+2022-01-12 11:57:20.598 -05:00 [INF] An order item with id 13527 store Id 7492 and customer Id 94780 of amount 38.25 was added.
+2022-01-12 11:58:58.558 -05:00 [INF] An product with id 44914 name Fern Wool Yarn that costs 4.50 was added.
+2022-01-12 11:59:01.301 -05:00 [INF] An inventory item with id 44915 store Id 7492 and product name Wool Yarn of amount 20 was added.
+2022-01-12 11:59:16.673 -05:00 [INF] The item with Inventory ID 44915 was increase to Quantity 25
+2022-01-12 12:00:30.654 -05:00 [INF] A store  with Id 20511 store name White Plain's CYF was added.

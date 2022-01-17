@@ -1,0 +1,17 @@
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\bin\Debug\net6.0\YarnBL.deps.json
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\bin\Debug\net6.0\YarnBL.dll
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\bin\Debug\net6.0\ref\YarnBL.dll
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\bin\Debug\net6.0\YarnBL.pdb
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\obj\Debug\net6.0\YarnBL.csproj.AssemblyReference.cache
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\obj\Debug\net6.0\YarnBL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\obj\Debug\net6.0\YarnBL.AssemblyInfoInputs.cache
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\obj\Debug\net6.0\YarnBL.AssemblyInfo.cs
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\obj\Debug\net6.0\YarnBL.csproj.CoreCompileInputs.cache
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\obj\Debug\net6.0\YarnBL.dll
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\obj\Debug\net6.0\ref\YarnBL.dll
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\obj\Debug\net6.0\YarnBL.pdb
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\bin\Debug\net6.0\YarnDL.dll
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\bin\Debug\net6.0\YarnModels.dll
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\bin\Debug\net6.0\YarnModels.pdb
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\bin\Debug\net6.0\YarnDL.pdb
+C:\Users\cynth\Revature\proj0\Laguerre-Cynthia-P0\YarnBL\obj\Debug\net6.0\YarnBL.csproj.CopyComplete
