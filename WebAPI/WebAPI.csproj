@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\YarnBL\YarnBL.csproj" />
+    <ProjectReference Include="..\YarnModels\YarnModels.csproj" />
+    <ProjectReference Include="..\YarnDL\YarnDL.csproj" />
+  </ItemGroup>
+
 </Project>
