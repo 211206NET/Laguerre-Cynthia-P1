@@ -30,7 +30,12 @@
       "ProjectGuid": "5c54c2b6-f436-40c3-aff8-886816b4edad",
       "DisplayName": "YarnBL",
       "ColorIndex": 4
+    },
+    "0efe4a77-a441-4ed8-bcc3-18ababdcd22d": {
+      "ProjectGuid": "0efe4a77-a441-4ed8-bcc3-18ababdcd22d",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 6
 }
