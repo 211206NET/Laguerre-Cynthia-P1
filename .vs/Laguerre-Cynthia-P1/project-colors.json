@@ -15,7 +15,22 @@
       "ProjectGuid": "0f39526d-7543-48ff-98fd-4b22486ab6a6",
       "DisplayName": "WebAPI",
       "ColorIndex": 1
+    },
+    "6f0852db-3a4e-47b5-bd50-e3cd138363dc": {
+      "ProjectGuid": "6f0852db-3a4e-47b5-bd50-e3cd138363dc",
+      "DisplayName": "YarnModels",
+      "ColorIndex": 2
+    },
+    "9edecb0a-4324-4b2f-a0cf-69e82c8df650": {
+      "ProjectGuid": "9edecb0a-4324-4b2f-a0cf-69e82c8df650",
+      "DisplayName": "YarnDL",
+      "ColorIndex": 3
+    },
+    "5c54c2b6-f436-40c3-aff8-886816b4edad": {
+      "ProjectGuid": "5c54c2b6-f436-40c3-aff8-886816b4edad",
+      "DisplayName": "YarnBL",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 5
 }

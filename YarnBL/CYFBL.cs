@@ -87,18 +87,18 @@ public class CYFBL : IBL
 /// Adds a new inventory to the list
 /// </summary>
 /// <param name="inventoryToAdd">inventory object to add</param>
-    public void AddInventory(Inventory inventoryToAdd)
+    public void AddInventory(int storeFrontID, Inventory inventoryToAdd)
     {
-        _dl.AddInventory(inventoryToAdd);
+        _dl.AddInventory(storeFrontID, inventoryToAdd);
     }
 
 /// <summary>
 /// Adds a new lineItem to the list
 /// </summary>
 /// <param name="lineItemToAdd">lineitem object to add</param>
-    public void AddLineItem(LineItem lineItemToAdd)
+    public void AddLineItem(string name, int inventoryID, int quantity, LineItem lineItemToAdd)
     {
-        _dl.AddLineItem(lineItemToAdd);
+        _dl.AddLineItem(name, inventoryID, quantity, lineItemToAdd);
     }
 
 /// <summary>
@@ -111,23 +111,23 @@ public class CYFBL : IBL
         _dl.EditLineItem(lineItemID, orderID);
     }
 
-/// <summary>
-/// Gets all products
-/// </summary>
-/// <returns>List of all products</returns>
-    public List<Product> GetAllProducts()
-    {
-        return _dl.GetAllProducts();
-    }
+///// <summary>
+///// Gets all products
+///// </summary>
+///// <returns>List of all products</returns>
+//    public List<Product> GetAllProducts()
+//    {
+//        return _dl.GetAllProducts();
+//    }
 
-/// <summary>
-/// Adds new product to the list
-/// </summary>
-/// <param name="productToAdd">Product object to add</param>
-    public void AddProduct(Product productToAdd)
-    {
-        _dl.AddProduct(productToAdd);
-    }
+///// <summary>
+///// Adds new product to the list
+///// </summary>
+///// <param name="productToAdd">Product object to add</param>
+//    public void AddProduct(int storeFrontID, Product productToAdd)
+//    {
+//        _dl.AddProduct(storeFrontID, productToAdd);
+//    }
 
 /// <summary>
 /// Adds quantity to inventory object
@@ -139,4 +139,27 @@ public class CYFBL : IBL
         _dl.AddMoreInventory(inventoryID, addQuantity);
     }
 
+    public Customer GetCustomerbyId(int customerID)
+    {
+        return _dl.GetCustomerbyId(customerID);
+    }
+
+    public StoreFront GetStoreFrontbyId(int storeFrontID)
+    {
+        return _dl.GetStoreFrontbyId(storeFrontID);
+    }
+
+    public Inventory GetInventorybyId(int inventoryID)
+    {
+        return _dl.GetInventorybyId(inventoryID);
+    }
+
+    public Customer GetCustomerbyName(string name)
+    {
+        return _dl.GetCustomerbyName(name);
+    }
+    public List<Inventory> GetInventoriesbyStoreId(int storeFrontID)
+    {
+        return _dl.GetInventoriesbyStoreId(storeFrontID);
+    }
 }

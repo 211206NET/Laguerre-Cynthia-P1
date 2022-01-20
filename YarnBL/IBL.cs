@@ -13,7 +13,7 @@ public interface IBL
 
     List<LineItem> GetAllLineItems();
 
-    void AddLineItem(LineItem lineItemToAdd);
+    void AddLineItem(string name, int inventoryID, int quantity, LineItem lineItemToAdd);
 
     List<StoreFront> GetAllStoreFronts();
 
@@ -21,17 +21,24 @@ public interface IBL
 
     List<Inventory> GetAllInventories();
 
-    void AddInventory(Inventory inventoryToAdd);
+    void AddInventory(int storeFrontID, Inventory inventoryToAdd);
 
     void EditLineItem(int lineItemID, int orderID);
 
-    List<Product> GetAllProducts();
+    //List<Product> GetAllProducts();
 
-    void AddProduct(Product productToAdd);
+    //void AddProduct(int storeFrontID, Product productToAdd);
     
     void AddMoreInventory(int inventoryID, int addQuantity);
 
-    // List<StoreOrder> GetAllStoreOrders();
+    Customer GetCustomerbyId(int customerID);
+    Customer GetCustomerbyName(string name);
+    
+    StoreFront GetStoreFrontbyId(int storeFrontID);
+    Inventory GetInventorybyId(int orderID);
 
-    // void AddStoreOrders(StoreOrder storeOrderToAdd);
+    List<Inventory> GetInventoriesbyStoreId(int storeFrontID);
+
+    //List<Order> GetOrdersbyStoreId(int storeFrontID);
+    //List<Order> GetOrdersbyCustomerName(string name);
 }

@@ -2,8 +2,9 @@ namespace Models;
 
 public class Product
 {
-    public Product () {}
+    public Product() { }
     public int ID { get; set; }
+    public int StoreFrontID { get; set; }
 
     public string? ProductName { get; set; }
     public string? Color { get; set; }
@@ -13,6 +14,7 @@ public class Product
     public Product(DataRow row)
     {
         ID = (int) row["Id"];
+        StoreFrontID = (int)row["StoreFrontId"];
         ProductName = row["Name"].ToString() ?? "";
         Color = row["Color"].ToString() ?? "";
         Description = row["Description"].ToString() ?? "";
@@ -22,6 +24,7 @@ public class Product
     public void ToDataRow(ref DataRow row)
     {
         row["Id"] = ID;
+        row["StoreFrontId"] = StoreFrontID;
         row["Name"] = ProductName;
         row["Color"] = Color;
         row["Description"] = Description;

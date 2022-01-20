@@ -10,13 +10,13 @@ public interface IRepo
 
     void AddStoreFront (StoreFront storefrontToAdd);
     
-    List<Product> GetAllProducts();
+    //List<Product> GetAllProducts();
 
-    void AddProduct (Product productToAdd);
+    //void AddProduct (int storeFrontID, Product productToAdd);
     
     List<Inventory> GetAllInventories();
 
-    void AddInventory (Inventory inventoryToAdd);
+    void AddInventory (int storeFrontID, Inventory inventoryToAdd);
 
     List<Order> GetAllOrders();
 
@@ -24,9 +24,16 @@ public interface IRepo
 
     List<LineItem> GetAllLineItems();
 
-    void AddLineItem (LineItem lineItemToAdd); 
+    void AddLineItem (string name, int inventoryID, int quantity, LineItem lineItemToAdd); 
 
     void EditLineItem(int lineItemID, int orderID);
 
     void AddMoreInventory(int inventoryID, int addQuantity);   
+    
+    Customer GetCustomerbyId(int customerID);
+    Customer GetCustomerbyName(string name);
+
+    StoreFront GetStoreFrontbyId(int storeFrontID);
+    Inventory GetInventorybyId(int inventoryID);
+    List<Inventory> GetInventoriesbyStoreId(int storeFrontID);
 }

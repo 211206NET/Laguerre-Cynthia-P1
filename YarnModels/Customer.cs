@@ -1,5 +1,7 @@
 using CustomExceptions;
 using System.Text.RegularExpressions;
+using System.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace Models;
 
@@ -32,23 +34,28 @@ public class Customer
         row["Password"] = Password;
     }
 
-    private string _name;
-    public string Name {
-        get => _name;
-        set{
-            Regex pattern = new Regex("[a-zA-Z0-9 !?']+$");
-            if(string.IsNullOrWhiteSpace(value))
-            {
-                throw new InputInvalidException("Name can't be empty");
-            }
-            else if(!pattern.IsMatch(value))
-            {
-                throw new InputInvalidException("Customer name can only can alphanumeric characters white space, !, ?, and '.");
-            }
-            else{
-                _name = value;
-            }
-        }
-    }
+    [Required]
+    [RegularExpression("[a-zA-Z0-9 !?']+$", ErrorMessage = "Customer name can only can alphanumeric characters white space, !, ?, and '.")]
+    public string Name { get; set; }
+
+
+    //private string _name;
+        //public string Name {
+        //get => _name;
+        //set{
+          //  Regex pattern = new Regex("[a-zA-Z0-9 !?']+$");
+           // if(string.IsNullOrWhiteSpace(value))
+            //{
+              //  throw new InputInvalidException("Name can't be empty");
+            //}
+            //else if(!pattern.IsMatch(value))
+            //{
+              //  throw new InputInvalidException("Customer name can only can alphanumeric characters white space, !, ?, and '.");
+            //}
+            //else{
+              //  _name = value;
+            //}
+        //}
+    //}
 
 }

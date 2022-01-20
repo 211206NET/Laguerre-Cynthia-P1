@@ -32,7 +32,7 @@ public class Order
     {
         ID = (int) row["Id"];
         StoreFrontID = (int) row["StoreFrontId"];
-        OrderDate = row["OrderDate"].ToString();
+        OrderDate = row["OrderDate"].ToString() ?? "";
         CustomerID = (int) row["CustomerId"];
         Total = (decimal) row["Total"];
     }
