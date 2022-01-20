@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Models;
+using BL;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,11 +10,19 @@ namespace WebAPI.Controllers
     [ApiController]
     public class LineItemController : ControllerBase
     {
+        private IBL _bl;
+
+        public LineItemController(IBL bl)
+        {
+            _bl = bl;
+        }
+
         // GET: api/<LineItemController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<LineItem> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<LineItem> allLineItems = _bl.GetAllLineItems();
+            return allLineItems;
         }
 
         // GET api/<LineItemController>/5

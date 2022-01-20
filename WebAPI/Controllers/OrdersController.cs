@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using BL;
+using Models;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,11 +11,19 @@ namespace WebAPI.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
+        private IBL _bl;
+        
+        public OrdersController(IBL bl)
+        {
+            _bl = bl;
+        }
+
         // GET: api/<OrdersController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Order> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<Order> allorders = _bl.GetAllOrders();
+            return allorders;
         }
 
         // GET api/<OrdersController>/5

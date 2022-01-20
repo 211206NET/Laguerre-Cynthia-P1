@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YarnDL", "YarnDL\YarnDL.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{22206749-0D16-4FCD-A009-46484A5C21AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{0F39526D-7543-48FF-98FD-4B22486AB6A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{0F39526D-7543-48FF-98FD-4B22486AB6A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0EFE4A77-A441-4ED8-BCC3-18ABABDCD22D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		CYF's ERD.jpeg = CYF's ERD.jpeg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
