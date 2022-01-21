@@ -367,13 +367,17 @@ public class DBRepo : IRepo
         using SqlCommand cmdAddLineItem = new SqlCommand(cmd, connection);
 
         Inventory currInvent = GetInventorybyId(inventoryID);
+        int InventoryID = GetInventorybyId(inventoryID).ID;
+        string? ProductName = GetInventorybyId(inventoryID).ProductName;
+        string? ProductColor = GetInventorybyId(inventoryID).ProductColor;
+        decimal ProductPrice = GetInventorybyId(inventoryID).ProductPrice;
         Order currOrder = GetOrderbyId(orderID);
         int OrderID = currOrder.ID;
-        cmdAddLineItem.Parameters.AddWithValue("@inventID", currInvent.ID);
-        cmdAddLineItem.Parameters.AddWithValue("@name", currInvent.ProductName);
-        cmdAddLineItem.Parameters.AddWithValue("@color", currInvent.ProductColor);
-        cmdAddLineItem.Parameters.AddWithValue("@price", currInvent.ProductPrice);
-        cmdAddLineItem.Parameters.AddWithValue("@qty", currInvent.Quantity);
+        cmdAddLineItem.Parameters.AddWithValue("@inventID", lineItemToAdd.InventoryID);
+        cmdAddLineItem.Parameters.AddWithValue("@name", lineItemToAdd.ProductName);
+        cmdAddLineItem.Parameters.AddWithValue("@color", lineItemToAdd.ProductColor);
+        cmdAddLineItem.Parameters.AddWithValue("@price", lineItemToAdd.ProductPrice);
+        cmdAddLineItem.Parameters.AddWithValue("@qty", lineItemToAdd.Quantity);
         cmdAddLineItem.Parameters.AddWithValue("@orderId", lineItemToAdd.OrderID);
         //Log.Information($"An lineitem with product id {lineItemToAdd.Item.ID} and quantity {lineItemToAdd.Quantity} was add to Cart.");
         cmdAddLineItem.ExecuteNonQuery();
