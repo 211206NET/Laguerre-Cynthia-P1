@@ -311,25 +311,29 @@ public class DBRepo : IRepo
         Log.Information($"An order item with id {orderToAdd.ID} store Id {orderToAdd.StoreFrontID} and customer Id {orderToAdd.CustomerID} of amount {orderToAdd.Total} was added.");
         connection.Close();
     }
-    //public void AddOrder(int customerID, int storeFrontID, Order orderToAdd)
-    //{
-    //    Order newOrder = new Order();
-    //    using SqlConnection connection = new SqlConnection(_connectionString);
-    //    connection.Open();
-    //    string cmd = "INSERT INTO Orders (Id, OrderDate, Total, CustomerId, StoreFrontId) Values (@ID, @OrderDate, @total, @custId, @storeId)";
-    //    using SqlCommand cmdAddOrder = new SqlCommand(cmd, connection);
-    //    cmdAddOrder.Parameters.AddWithValue("@ID", orderToAdd.ID);
-    //    newOrder.OrderDate = DateTime.Now.ToString();
-    //    cmdAddOrder.Parameters.AddWithValue("@OrderDate", orderToAdd.OrderDate);
-    //    cmdAddOrder.Parameters.AddWithValue("@total", orderToAdd.Total);
-    //    cmdAddOrder.Parameters.AddWithValue("@custId", orderToAdd.CustomerID);
-    //    cmdAddOrder.Parameters.AddWithValue("@storeId", orderToAdd.StoreFrontID);
-    //    cmdAddOrder.ExecuteNonQuery();
-    //    Log.Information($"An order item with id {orderToAdd.ID} store Id {orderToAdd.StoreFrontID} and customer Id {orderToAdd.CustomerID} of amount {orderToAdd.Total} was added.");
-    //    connection.Close();
-    //}
+    public void AddOrder(string name, int storeFrontID, Order orderToAdd)
+    {
+        //Order newOrder = new Order();
+        using SqlConnection connection = new SqlConnection(_connectionString);
+        connection.Open();
+        string cmd = "INSERT INTO Orders (OrderDate, Total, CustomerId, StoreFrontId) Values (@OrderDate, @total, @custId, @storeId)";
+        using SqlCommand cmdAddOrder = new SqlCommand(cmd, connection);
+        Customer currCustomer = GetCustomerbyName(name);
+        int CustomerID = currCustomer.ID;
+        StoreFront currStoreFront = GetStoreFrontbyId(storeFrontID);
+        int StoreFrontID = currStoreFront.ID;
+        string OrderDate = DateTime.Now.ToString();
+        cmdAddOrder.Parameters.AddWithValue("@OrderDate", orderToAdd.OrderDate);
+        decimal Total = orderToAdd.CalculateTotal();
+        cmdAddOrder.Parameters.AddWithValue("@total", orderToAdd.Total);
+        cmdAddOrder.Parameters.AddWithValue("@custId", orderToAdd.CustomerID);
+        cmdAddOrder.Parameters.AddWithValue("@storeId", orderToAdd.StoreFrontID);
+        cmdAddOrder.ExecuteNonQuery();
+        Log.Information($"An order item with id {orderToAdd.ID} store Id {orderToAdd.StoreFrontID} and customer Id {orderToAdd.CustomerID} of amount {orderToAdd.Total} was added.");
+        connection.Close();
+        }
 
-    public List<LineItem> GetAllLineItems()
+        public List<LineItem> GetAllLineItems()
     {
         List<LineItem> allLineItems = new List<LineItem>();
 
@@ -355,7 +359,7 @@ public class DBRepo : IRepo
         return allLineItems;
     }
 
-    public void AddLineItem(string name, int inventoryID, int quantity, LineItem lineItemToAdd)
+    public void AddLineItem(int orderID, int inventoryID, int quantity, LineItem lineItemToAdd)
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
         connection.Open();
@@ -363,8 +367,8 @@ public class DBRepo : IRepo
         using SqlCommand cmdAddLineItem = new SqlCommand(cmd, connection);
 
         Inventory currInvent = GetInventorybyId(inventoryID);
-        Customer currCustomer = GetCustomerbyName(name);
-        int CustomerID = currCustomer.ID;
+        Order currOrder = GetOrderbyId(orderID);
+        int OrderID = currOrder.ID;
         cmdAddLineItem.Parameters.AddWithValue("@inventID", currInvent.ID);
         cmdAddLineItem.Parameters.AddWithValue("@name", currInvent.ProductName);
         cmdAddLineItem.Parameters.AddWithValue("@color", currInvent.ProductColor);
@@ -441,7 +445,6 @@ public class DBRepo : IRepo
         using SqlCommand cmd = new SqlCommand(query, connection);
         SqlParameter param = new SqlParameter("@storeID", storeFrontID);
         cmd.Parameters.Add(param);
-       
 
         using SqlDataReader reader = cmd.ExecuteReader();
         StoreFront store = new StoreFront();
@@ -478,7 +481,7 @@ public class DBRepo : IRepo
             invent.ProductName = reader.GetString(3);
             invent.ProductColor = reader.GetString(4);
             invent.ProductDescription = reader.GetString(5);
-            invent.ProductPrice = reader.GetInt32(6);
+            invent.ProductPrice = reader.GetDecimal(6);
         }
         connection.Close();
         return invent;
@@ -553,5 +556,69 @@ public class DBRepo : IRepo
             
         }
         return inventories;
+    }
+
+    public Order GetOrderbyId(int orderID)
+    {
+        string query = "Select * From Orders Where Id = @orderID";
+        using SqlConnection connection = new SqlConnection(_connectionString);
+
+        connection.Open();
+
+        using SqlCommand cmd = new SqlCommand(query, connection);
+        SqlParameter param = new SqlParameter("@orderID", orderID);
+        cmd.Parameters.Add(param);
+
+
+        using SqlDataReader reader = cmd.ExecuteReader();
+        Order orders = new Order();
+        if (reader.Read())
+        {
+            orderID = reader.GetInt32(0);
+            orders.OrderDate = reader.GetString(1);
+            orders.Total = reader.GetDecimal(2);
+            orders.CustomerID = reader.GetInt32(3);
+            orders.StoreFrontID = reader.GetInt32(4);
+            
+        }
+        connection.Close();
+        return orders;
+
+    }
+
+    public List<LineItem> GetLineItemsbyOrderId(int orderID)
+    {
+
+        string selectcmd = "Select * From LineItem Where OrdersId = @orderID";
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        SqlParameter param = new SqlParameter("@orderID", orderID);
+        cmd.Parameters.Add(param);
+
+        DataSet lineItemSet = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+        adapter.Fill(lineItemSet, "lineItem");
+
+        DataTable lineItemTable = lineItemSet.Tables["lineItem"];
+
+        List<LineItem> lineItems = new List<LineItem>();
+        foreach (DataRow row in lineItemTable.Rows)
+        {
+            lineItems.Add(new LineItem
+            {
+                ID = (int)row["Id"],
+                InventoryID = (int) row["InventoryId"],
+                ProductName = row["ProductName"].ToString(),
+                ProductColor = row["ProductColor"].ToString(),
+                ProductPrice = (decimal)row["ProductPrice"],
+                Quantity = (int)row["Quantity"],
+                OrderID = (int) row["OrdersId"]
+
+            });
+
+        }
+        return lineItems;
     }
 }

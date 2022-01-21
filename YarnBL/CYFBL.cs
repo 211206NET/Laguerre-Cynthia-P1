@@ -96,9 +96,9 @@ public class CYFBL : IBL
 /// Adds a new lineItem to the list
 /// </summary>
 /// <param name="lineItemToAdd">lineitem object to add</param>
-    public void AddLineItem(string name, int inventoryID, int quantity, LineItem lineItemToAdd)
+    public void AddLineItem(int orderID, int inventoryID, int quantity, LineItem lineItemToAdd)
     {
-        _dl.AddLineItem(name, inventoryID, quantity, lineItemToAdd);
+        _dl.AddLineItem(orderID, inventoryID, quantity, lineItemToAdd);
     }
 
 /// <summary>
@@ -161,5 +161,19 @@ public class CYFBL : IBL
     public List<Inventory> GetInventoriesbyStoreId(int storeFrontID)
     {
         return _dl.GetInventoriesbyStoreId(storeFrontID);
+    }
+
+    public Order GetOrderbyId(int orderID)
+    {
+        return _dl.GetOrderbyId(orderID);
+    }
+
+    public void AddOrder(string name, int storeFrontID, Order orderToAdd)
+    {
+         _dl.AddOrder(name, storeFrontID, orderToAdd);    
+    }
+    public List<LineItem> GetLineItemsbyOrderId(int orderID)
+    {
+        return _dl.GetLineItemsbyOrderId(orderID);
     }
 }

@@ -35,9 +35,9 @@ namespace WebAPI.Controllers
 
         // POST api/<OrdersController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(string name, int storeFrontID, [FromBody] Order orderToAdd)
         {
-
+            _bl.AddOrder(name, storeFrontID, orderToAdd);
         }
 
         // PUT api/<OrdersController>/5

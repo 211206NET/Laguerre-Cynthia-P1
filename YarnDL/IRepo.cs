@@ -24,7 +24,7 @@ public interface IRepo
 
     List<LineItem> GetAllLineItems();
 
-    void AddLineItem (string name, int inventoryID, int quantity, LineItem lineItemToAdd); 
+    void AddLineItem (int orderID, int inventoryID, int quantity, LineItem lineItemToAdd); 
 
     void EditLineItem(int lineItemID, int orderID);
 
@@ -36,4 +36,8 @@ public interface IRepo
     StoreFront GetStoreFrontbyId(int storeFrontID);
     Inventory GetInventorybyId(int inventoryID);
     List<Inventory> GetInventoriesbyStoreId(int storeFrontID);
+
+    Order GetOrderbyId(int orderID);
+    void AddOrder(string name, int storeFrontID, Order orderToAdd);
+    List<LineItem> GetLineItemsbyOrderId(int orderID);
 }
