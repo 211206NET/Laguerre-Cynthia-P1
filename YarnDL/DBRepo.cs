@@ -77,29 +77,7 @@ public class DBRepo : IRepo
         Log.Information($"A customer with and name {customerToAdd.Name} and email {customerToAdd.Email} was added");
         connection.Close();
     }
-    //public void AddCustomer(Customer customerToAdd)
-    //{
-    //    DataSet custSet = new DataSet();
-    //    string selectCmd = "Select * From Customer Where Id = -1";
-    //    using (SqlConnection connection = new SqlConnection(_connectionString))
-    //    {
-    //        using(SqlDataAdapter dataAdapter = new SqlDataAdapter(selectCmd, connection))
-    //        {
-    //            dataAdapter.Fill(custSet, "Customer");
-    //            DataTable custTable = custSet.Tables["Customer"];
 
-    //            DataRow newRow = custTable.NewRow();
-    //            customerToAdd.ToDataRow(ref newRow);
-
-    //            string insertCmd = $"INSERT INTO Customer (Name, Email, Password) VALUES ('{customerToAdd.Name}', '{customerToAdd.Email}', '{customerToAdd.Password}')";
-
-    //            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(dataAdapter);
-
-    //            dataAdapter.InsertCommand = cmdBuilder.GetInsertCommand();
-    //            dataAdapter.Update(custTable);
-    //        }
-    //    }
-    //}
     public List<StoreFront> GetAllStoreFronts()
     {
         List<StoreFront> allStoreFronts = new List<StoreFront>();
@@ -172,50 +150,6 @@ public class DBRepo : IRepo
         connection.Close();
     }
 
-
-
-    //    public List<Product> GetAllProducts()
-    //{
-    //    List<Product> allProducts = new List<Product>();
-
-    //    using SqlConnection connection = new SqlConnection(_connectionString);
-    //    string productSelect = "Select * From Product";
-
-    //    DataSet CYFSet = new DataSet();
-
-    //    using SqlDataAdapter productAdapter = new SqlDataAdapter(productSelect, connection);
-
-    //    productAdapter.Fill(CYFSet, "Product");
-
-    //    DataTable? productTable = CYFSet.Tables["Product"];
-
-    //    if(productTable != null)
-    //    {
-    //        foreach(DataRow row in productTable.Rows)
-    //        {
-    //            Product prod = new Product(row);
-    //            allProducts.Add(prod);
-    //        }
-    //    }
-    //    return allProducts;
-    //}
-
-    //    public void AddProduct(int storeFrontID, Product productToAdd)
-    //{
-    //    using SqlConnection connection = new SqlConnection(_connectionString);
-    //    connection.Open();
-    //    string cmd = "INSERT INTO Product (StoreFrontId, Name, Color, Description, Price) Values (@storeID, @prodname,@color, @descrip, @price)";
-    //    using SqlCommand cmdAddProduct = new SqlCommand(cmd, connection);
-       
-    //    cmdAddProduct.Parameters.AddWithValue("@storeID", productToAdd.StoreFrontID);
-    //    cmdAddProduct.Parameters.AddWithValue("@prodname", productToAdd.ProductName);
-    //    cmdAddProduct.Parameters.AddWithValue("@color", productToAdd.Color);
-    //    cmdAddProduct.Parameters.AddWithValue("@descrip", productToAdd.Description);
-    //    cmdAddProduct.Parameters.AddWithValue("@price", productToAdd.Price);
-    //    Log.Information($"An product with id {productToAdd.ID} name {productToAdd.Color} {productToAdd.ProductName} that costs {productToAdd.Price} was added.");
-    //    cmdAddProduct.ExecuteNonQuery();
-    //    connection.Close();
-    //}
 
         public List<Inventory> GetAllInventories()
     {
@@ -322,9 +256,10 @@ public class DBRepo : IRepo
         int CustomerID = currCustomer.ID;
         StoreFront currStoreFront = GetStoreFrontbyId(storeFrontID);
         int StoreFrontID = currStoreFront.ID;
-        string OrderDate = DateTime.Now.ToString();
-        cmdAddOrder.Parameters.AddWithValue("@OrderDate", orderToAdd.OrderDate);
+        DateTime OrderDate = DateTime.Now;
         decimal Total = orderToAdd.CalculateTotal();
+
+        cmdAddOrder.Parameters.AddWithValue("@OrderDate", orderToAdd.OrderDate);
         cmdAddOrder.Parameters.AddWithValue("@total", orderToAdd.Total);
         cmdAddOrder.Parameters.AddWithValue("@custId", orderToAdd.CustomerID);
         cmdAddOrder.Parameters.AddWithValue("@storeId", orderToAdd.StoreFrontID);
@@ -406,7 +341,6 @@ public class DBRepo : IRepo
 
         string addInventCmd = $"UPDATE Inventory SET Quantity = @qty WHERE ID = @InventoryId";
         using SqlCommand inventcmd = new SqlCommand(addInventCmd, connection);
-
         inventcmd.Parameters.AddWithValue("InventoryId", InventoryID);
         inventcmd.Parameters.AddWithValue("@qty", addQuantity);
         inventcmd.ExecuteNonQuery();
@@ -465,7 +399,7 @@ public class DBRepo : IRepo
     }
     public Inventory GetInventorybyId(int inventoryID)
     {
-        string query = "Select * From StoreFront Where Id = @inventID";
+        string query = "Select * From Inventory Where Id = @inventID";
         using SqlConnection connection = new SqlConnection(_connectionString);
 
         connection.Open();
@@ -579,11 +513,10 @@ public class DBRepo : IRepo
         if (reader.Read())
         {
             orderID = reader.GetInt32(0);
-            orders.OrderDate = reader.GetString(1);
+            orders.OrderDate = reader.GetDateTime(1);
             orders.Total = reader.GetDecimal(2);
             orders.CustomerID = reader.GetInt32(3);
             orders.StoreFrontID = reader.GetInt32(4);
-            
         }
         connection.Close();
         return orders;

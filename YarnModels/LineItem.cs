@@ -21,8 +21,7 @@ public class LineItem
     public LineItem(DataRow row)
     {
         ID = (int) row["Id"];
-        InventoryID = (int) row["InventoryId"];
-        StoreFrontID = (int) row["StoreFrontId"];
+        InventoryID = (int)row["InventoryId"];
         ProductName = row["ProductName"].ToString();
         ProductColor = row["ProductColor"].ToString();
         ProductPrice= (decimal) row["ProductPrice"];
@@ -34,7 +33,6 @@ public class LineItem
     {
         row["Id"] = ID;
         row["InventoryId"] = InventoryID;
-        row["StoreFrontId"] = StoreFrontID;
         row["ProductName"] = ProductName;
         row["ProductColor"] = ProductColor;
         row["ProductPrice"] = ProductPrice;

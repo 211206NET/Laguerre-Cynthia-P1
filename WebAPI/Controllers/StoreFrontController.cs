@@ -38,7 +38,7 @@ namespace WebAPI.Controllers
         public ActionResult<StoreFront> Get(int id)
         {
             StoreFront foundStore = _bl.GetStoreFrontbyId(id);
-                if(foundStore.ID != 0)
+                if(foundStore.ID > -1)
             {
                 return Ok(foundStore);
             }
