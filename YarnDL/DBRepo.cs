@@ -278,7 +278,7 @@ public class DBRepo : IRepo
         DataSet CYFSet = new DataSet();
 
         using SqlDataAdapter lineItemAdapter = new SqlDataAdapter(lineItemSelect, connection);
-
+        
         lineItemAdapter.Fill(CYFSet, "LineItem");
 
         DataTable? LineItemTable = CYFSet.Tables["LineItem"];
@@ -298,17 +298,21 @@ public class DBRepo : IRepo
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
         connection.Open();
-        string cmd = "INSERT INTO LineItem (InventoryId, ProductName, ProductColor, ProductPrice, Quantity, OrdersId) Values (@inventID, @name, @color, @price, @qty, @orderId)";
+        string cmd = "INSERT INTO LineItem (InventoryId, StoreFrontId, CustomerId, ProductName, ProductColor, ProductPrice, Quantity, OrdersId) Values (@inventID, @storeID, @custID, @name, @color, @price, @qty, @orderId)";
         using SqlCommand cmdAddLineItem = new SqlCommand(cmd, connection);
 
         Inventory currInvent = GetInventorybyId(inventoryID);
         int InventoryID = GetInventorybyId(inventoryID).ID;
+        int StoreFrontID = GetInventorybyId(inventoryID).StoreFrontID;
         string? ProductName = GetInventorybyId(inventoryID).ProductName;
         string? ProductColor = GetInventorybyId(inventoryID).ProductColor;
         decimal ProductPrice = GetInventorybyId(inventoryID).ProductPrice;
         Order currOrder = GetOrderbyId(orderID);
         int OrderID = currOrder.ID;
+        int CustomerID = currOrder.CustomerID;
         cmdAddLineItem.Parameters.AddWithValue("@inventID", lineItemToAdd.InventoryID);
+        cmdAddLineItem.Parameters.AddWithValue("@storeID", lineItemToAdd.StoreFrontID);
+        cmdAddLineItem.Parameters.AddWithValue("@custID", lineItemToAdd.CustomerID);
         cmdAddLineItem.Parameters.AddWithValue("@name", lineItemToAdd.ProductName);
         cmdAddLineItem.Parameters.AddWithValue("@color", lineItemToAdd.ProductColor);
         cmdAddLineItem.Parameters.AddWithValue("@price", lineItemToAdd.ProductPrice);
@@ -476,7 +480,7 @@ public class DBRepo : IRepo
 
         adapter.Fill(inventSet, "inventory");
 
-        DataTable inventTable = inventSet.Tables["inventory"];
+        DataTable? inventTable = inventSet.Tables["inventory"];
 
         List<Inventory> inventories = new List<Inventory>();
         foreach (DataRow row in inventTable.Rows)
@@ -538,7 +542,7 @@ public class DBRepo : IRepo
 
         adapter.Fill(lineItemSet, "lineItem");
 
-        DataTable lineItemTable = lineItemSet.Tables["lineItem"];
+        DataTable? lineItemTable = lineItemSet.Tables["lineItem"];
 
         List<LineItem> lineItems = new List<LineItem>();
         foreach (DataRow row in lineItemTable.Rows)
@@ -547,6 +551,8 @@ public class DBRepo : IRepo
             {
                 ID = (int)row["Id"],
                 InventoryID = (int) row["InventoryId"],
+                StoreFrontID = (int)row["StoreFrontId"],
+                CustomerID = (int)row["CustomerId"],
                 ProductName = row["ProductName"].ToString(),
                 ProductColor = row["ProductColor"].ToString(),
                 ProductPrice = (decimal)row["ProductPrice"],
@@ -557,5 +563,326 @@ public class DBRepo : IRepo
 
         }
         return lineItems;
+    }
+
+    public List<Order> GetOrdersbyCustomerNameOrderDESC(string name)
+    {
+        int customerID = (int)GetCustomerbyName(name).ID;
+
+        string selectcmd = "Select * From Orders Where CustomerId = @custID Order By OrderDate DESC";
+        string selectlinecmd = "Select * From LineItem Where CustomerId = @id2";
+
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        cmd.Parameters.AddWithValue("@custID", customerID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", customerID);
+
+        DataSet CYFSET = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
+
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
+
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
+
+        List<Order> allOrders = new List<Order>();
+        if(orderTable != null){
+            foreach (DataRow row in orderTable.Rows)
+            {
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
+        }
+        return allOrders;
+    }
+
+    public List<Order> GetOrdersbyCustomerNameOrderASC(string name)
+    {
+        int customerID = (int)GetCustomerbyName(name).ID;
+
+        string selectcmd = "Select * From Orders Where CustomerId = @custID Order By OrderDate ASC";
+        string selectlinecmd = "Select * From LineItem Where CustomerId = @id2";
+
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        cmd.Parameters.AddWithValue("@custID", customerID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", customerID);
+
+        DataSet CYFSET = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
+
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
+
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
+
+        List<Order> allOrders = new List<Order>();
+        if(orderTable != null){
+            foreach (DataRow row in orderTable.Rows)
+            {
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
+        }
+        return allOrders;
+    }
+
+    public List<Order> GetOrdersbyCustomerNameTotalDESC(string name)
+    {
+        int customerID = (int)GetCustomerbyName(name).ID;
+
+        string selectcmd = "Select * From Orders Where CustomerId = @custID Order By Total DESC";
+        string selectlinecmd = "Select * From LineItem Where CustomerId = @id2";
+
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        cmd.Parameters.AddWithValue("@custID", customerID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", customerID);
+
+        DataSet CYFSET = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
+
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
+
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
+
+        List<Order> allOrders = new List<Order>();
+        if(orderTable != null){
+            foreach (DataRow row in orderTable.Rows)
+            {
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
+        }
+        return allOrders;
+    }
+
+    public List<Order> GetOrdersbyCustomerNameTotalASC(string name)
+    {
+        int customerID = (int)GetCustomerbyName(name).ID;
+
+        string selectcmd = "Select * From Orders Where CustomerId = @custID Order By Total ASC";
+        string selectlinecmd = "Select * From LineItem Where CustomerId = @id2";
+
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        cmd.Parameters.AddWithValue("@custID", customerID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", customerID);
+
+        DataSet CYFSET = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
+
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
+
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
+
+        List<Order> allOrders = new List<Order>();
+        if(orderTable != null){
+            foreach (DataRow row in orderTable.Rows)
+            {
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
+        }
+        return allOrders;
+    }
+
+    public List<Order> GetOrdersbyStoreFrontIdOrderDESC(int storeFrontID)
+    {
+
+        string selectcmd = "Select * From Orders Where StoreFrontId = @storeID Order By OrderDate DESC";
+        string selectlinecmd = "Select * From LineItem Where StoreFrontId = @id2";
+
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        cmd.Parameters.AddWithValue("@storeID", storeFrontID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", storeFrontID);
+
+        DataSet CYFSET = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
+
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
+
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
+
+        List<Order> allOrders = new List<Order>();
+        if(orderTable != null){
+            foreach (DataRow row in orderTable.Rows)
+            {
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
+        }
+        return allOrders;
+    }
+
+    public List<Order> GetOrdersbyStoreFrontIdOrderASC(int storeFrontID)
+    {
+        string selectcmd = "Select * From Orders Where StoreFrontId = @storeID Order By OrderDate ASC";
+        string selectlinecmd = "Select * From LineItem Where StoreFrontId = @id2";
+
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        cmd.Parameters.AddWithValue("@storeID", storeFrontID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", storeFrontID);
+
+        DataSet CYFSET = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
+
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
+
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
+
+        List<Order> allOrders = new List<Order>();
+        if(orderTable != null){
+            foreach (DataRow row in orderTable.Rows)
+            {
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
+        }
+        return allOrders;
+    }
+
+    public List<Order> GetOrdersbyStoreFrontIdTotalDESC(int storeFrontID)
+    {
+        string selectcmd = "Select * From Orders Where StoreFrontId = @storeID Order By Total DESC";
+        string selectlinecmd = "Select * From LineItem Where StoreFrontId = @id2";
+
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        cmd.Parameters.AddWithValue("@storeID", storeFrontID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", storeFrontID);
+
+        DataSet CYFSET = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
+
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
+
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
+
+        List<Order> allOrders = new List<Order>();
+        if(orderTable != null){
+            foreach (DataRow row in orderTable.Rows)
+            {
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
+        }
+        return allOrders;
+    }
+
+    public List<Order> GetOrdersbyStoreFrontIdTotalASC(int storeFrontID)
+    {
+        string selectcmd = "Select * From Orders Where StoreFrontId = @storeID Order By Total ASC";
+        string selectlinecmd = "Select * From LineItem Where StoreFrontId = @id2";
+
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        cmd.Parameters.AddWithValue("@storeID", storeFrontID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", storeFrontID);
+
+        DataSet CYFSET = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
+
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
+
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
+
+        List<Order> allOrders = new List<Order>();
+        if(orderTable != null){
+            foreach (DataRow row in orderTable.Rows)
+            {
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
+        }
+        return allOrders;
     }
 }

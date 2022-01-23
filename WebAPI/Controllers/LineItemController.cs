@@ -36,7 +36,12 @@ namespace WebAPI.Controllers
         [HttpPost("Update LineItem by {orderID}")]
         public void Post(int orderID, int inventoryID, int quantity, [FromBody] LineItem lineItemToAdd)
         {
+            
             Inventory currInventory = _bl.GetInventorybyId(inventoryID);
+            lineItemToAdd.ProductColor = currInventory.ProductColor;
+            lineItemToAdd.ProductName = currInventory.ProductName;
+            lineItemToAdd.ProductPrice = currInventory.ProductPrice;
+            lineItemToAdd.StoreFrontID = currInventory.StoreFrontID;
             _bl.AddLineItem(orderID, inventoryID, quantity, lineItemToAdd);
             int addQuantity = currInventory.Quantity - quantity;
             _bl.AddMoreInventory(inventoryID, addQuantity);

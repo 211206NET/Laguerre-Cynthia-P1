@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Caching.Memory;
 using Models;
 using BL;
+using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,6 +16,7 @@ namespace WebAPI.Controllers
     {
         private IBL _bl;
         private IMemoryCache _memoryCache;
+        
         public StoreFrontController(IBL bl, IMemoryCache memoryCache)
         {
             _bl = bl;
@@ -66,6 +68,51 @@ namespace WebAPI.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+        [HttpGet("orders sorted by {storeFrontID}")]
+        public ActionResult<Order> GetCustomerOrders(int storeFrontID, string sort)
+        {
+            StoreFront currStore = _bl.GetStoreFrontbyId(storeFrontID);
+            if(sort == "newer")
+            {
+                List<Order> allOrders = _bl.GetOrdersbyStoreFrontIdOrderDESC(storeFrontID);
+                if(allOrders.Count == 0)
+                {
+                    return NoContent();
+                }
+                return Ok(allOrders);
+            }
+            else if(sort == "older")
+            {
+                List<Order> allOrders = _bl.GetOrdersbyStoreFrontIdOrderASC(storeFrontID);
+                if(allOrders.Count == 0)
+                {
+                    return NoContent();
+                }
+                return Ok(allOrders);
+            }
+            else if(sort == "lower")
+            {
+                List<Order> allOrders = _bl.GetOrdersbyStoreFrontIdTotalDESC(storeFrontID);
+                if(allOrders.Count == 0)
+                {
+                    return NoContent();
+                }
+                return Ok(allOrders);
+            }
+            else if(sort == "higher")
+            {
+                List<Order> allOrders = _bl.GetOrdersbyStoreFrontIdTotalASC(storeFrontID);
+                if(allOrders.Count == 0)
+                {
+                    return NoContent();
+                }
+                return Ok(allOrders);
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
     }
 }

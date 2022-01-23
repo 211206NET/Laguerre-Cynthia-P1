@@ -41,6 +41,22 @@ public interface IBL
     Order GetOrderbyId(int orderID);
     void AddOrder(string name, int storeFrontID, Order orderToAdd);
 
+    List<LineItem> GetLineItemsbyOrderId(int orderID);
+
     //List<Order> GetOrdersbyStoreId(int storeFrontID);
-    //List<Order> GetOrdersbyCustomerName(string name);
+    List<Order> GetOrdersbyCustomerNameOrderDESC(string name);
+
+    List<Order> GetOrdersbyCustomerNameOrderASC(string name);
+
+    List<Order> GetOrdersbyCustomerNameTotalDESC(string name);
+
+    List<Order> GetOrdersbyCustomerNameTotalASC(string name);
+
+    List<Order> GetOrdersbyStoreFrontIdOrderDESC(int storeFrontID);
+
+    List<Order> GetOrdersbyStoreFrontIdOrderASC(int storeFrontID);
+
+    List<Order> GetOrdersbyStoreFrontIdTotalDESC(int storeFrontID);
+
+    List<Order> GetOrdersbyStoreFrontIdTotalASC(int storeFrontID);
 }

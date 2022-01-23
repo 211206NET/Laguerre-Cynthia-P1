@@ -50,7 +50,7 @@ namespace WebAPI.Controllers
         }
 
         // PUT api/<InventoryController>/5
-        [HttpPut("{id}")]
+        [HttpPut]
         public void Put(int inventoryID, int addQuantity, [FromBody] string value)
         {
             _bl.AddMoreInventory(inventoryID, addQuantity);

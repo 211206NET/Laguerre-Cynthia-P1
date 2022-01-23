@@ -1,5 +1,6 @@
 using DL;
 using BL;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,9 @@ builder.Services.AddSwaggerGen();
 //Registering our deps here for dependency injection
 builder.Services.AddScoped<IRepo>(ctx => new DBRepo(builder.Configuration.GetConnectionString("CYFDB")));
 builder.Services.AddScoped<IBL, CYFBL>();
+
+//logging
+
 
 var app = builder.Build();
 

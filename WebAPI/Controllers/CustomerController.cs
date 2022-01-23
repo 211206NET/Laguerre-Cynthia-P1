@@ -32,19 +32,88 @@ namespace WebAPI.Controllers
             
         }
 
-        // GET api/<CustomerController>/5
-        [HttpGet("{id}")]
-        public ActionResult<Customer> Get(int id)
+        //// GET api/<CustomerController>/5
+        //[HttpGet("{id}")]
+        //public ActionResult<Customer> Get(int id)
+        //{
+        //    Customer foundCust = _bl.GetCustomerbyId(id);
+        //    if(foundCust.ID > -1)
+        //    {
+        //        return Ok(foundCust);
+        //    }
+        //    else
+        //    {
+        //        return NoContent();
+        //    }
+        //}
+        [HttpGet("orders new to old by {name}")]
+        public ActionResult<Customer> Get(string name)
         {
-            Customer foundCust = _bl.GetCustomerbyId(id);
-            if(foundCust.ID > -1)
-            {
-                return Ok(foundCust);
-            }
-            else
+            Customer foundCust = _bl.GetCustomerbyName(name);
+            //if(foundCust.ID > -1)
+            //{
+            //    return NoContent();
+            //}
+            List<Order> allOrders = _bl.GetOrdersbyCustomerNameOrderDESC(name);
+            if(allOrders.Count == 0)
             {
                 return NoContent();
             }
+            return Ok(allOrders);
+        }
+        [HttpGet("orders old to new by {name}")]
+        public ActionResult<Order> GetCustomerOrders(string name, string sort)
+        {
+            Customer foundCust = _bl.GetCustomerbyName(name);
+            if(sort == "newer")
+            {
+                List<Order> allOrders = _bl.GetOrdersbyCustomerNameOrderDESC(name);
+                if(allOrders.Count == 0)
+                {
+                    return NoContent();
+                }
+                return Ok(allOrders);
+            }
+            else if(sort == "older")
+            {
+                List<Order> allOrders = _bl.GetOrdersbyCustomerNameOrderASC(name);
+                if(allOrders.Count == 0)
+                {
+                    return NoContent();
+                }
+                return Ok(allOrders);
+            }
+            else if(sort == "higer") 
+            {
+                List<Order> allOrders = _bl.GetOrdersbyCustomerNameTotalDESC(name);
+                if(allOrders.Count == 0)
+                {
+                    return NoContent();
+                }
+                return Ok(allOrders);
+            }
+            else if(sort == "lower")
+            {
+                List<Order> allOrders = _bl.GetOrdersbyCustomerNameTotalASC(name);
+                if(allOrders.Count == 0)
+                {
+                    return NoContent();
+                }
+                return Ok(allOrders);
+            }
+            else
+            {
+                return BadRequest();
+            }
+            // if(selection == "ASC")
+            // {
+            //     List<Order> allOrders = _bl.GetOrdersbyCustomerNameOrderASC(name);
+            //     if(allOrders.Count == 0)
+            //     {
+            //         return NoContent();
+            //     }
+            //     return Ok(allOrders);
+            // }
         }
 
         //// GET api/<CustomerController>/5

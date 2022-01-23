@@ -46,6 +46,7 @@ namespace WebAPI.Controllers
         public void Post(string name, int storeFrontID, [FromBody] Order orderToAdd)
         {
             string OrderDate = DateTime.Now.ToString();
+            List<LineItem> lineItems = _bl.GetAllLineItems();
             _bl.AddOrder(name, storeFrontID, orderToAdd);
         }
 

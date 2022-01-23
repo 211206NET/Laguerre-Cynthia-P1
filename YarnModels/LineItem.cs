@@ -7,6 +7,7 @@ public class LineItem
     //public Product? Item { get; set; }
     public int InventoryID { get; set; }
     public int StoreFrontID { get; set; }
+    public int CustomerID { get; set; }
     public string? ProductName { get; set; }
     public string? ProductColor { get; set; }
     public decimal ProductPrice { get; set; }
@@ -22,6 +23,8 @@ public class LineItem
     {
         ID = (int) row["Id"];
         InventoryID = (int)row["InventoryId"];
+        StoreFrontID = (int)row["StoreFrontId"];
+        CustomerID = (int)row["CustomerId"];
         ProductName = row["ProductName"].ToString();
         ProductColor = row["ProductColor"].ToString();
         ProductPrice= (decimal) row["ProductPrice"];
@@ -33,6 +36,8 @@ public class LineItem
     {
         row["Id"] = ID;
         row["InventoryId"] = InventoryID;
+        row["StoreFrontId"] = StoreFrontID;
+        row["CustomerId"] = CustomerID;
         row["ProductName"] = ProductName;
         row["ProductColor"] = ProductColor;
         row["ProductPrice"] = ProductPrice;

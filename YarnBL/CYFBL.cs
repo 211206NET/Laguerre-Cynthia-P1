@@ -170,10 +170,49 @@ public class CYFBL : IBL
 
     public void AddOrder(string name, int storeFrontID, Order orderToAdd)
     {
-         _dl.AddOrder(name, storeFrontID, orderToAdd);    
+        _dl.AddOrder(name, storeFrontID, orderToAdd);    
     }
     public List<LineItem> GetLineItemsbyOrderId(int orderID)
     {
         return _dl.GetLineItemsbyOrderId(orderID);
+    }
+
+    public List<Order> GetOrdersbyCustomerNameOrderDESC(string name)
+    {
+        return _dl.GetOrdersbyCustomerNameOrderDESC(name);
+    }
+
+    public List<Order> GetOrdersbyCustomerNameOrderASC(string name)
+    {
+        return _dl.GetOrdersbyCustomerNameOrderASC(name);
+    }
+
+    public List<Order> GetOrdersbyCustomerNameTotalDESC(string name)
+    {
+        return _dl.GetOrdersbyCustomerNameTotalDESC(name);
+    }
+
+    public List<Order> GetOrdersbyCustomerNameTotalASC(string name)
+    {
+        return _dl.GetOrdersbyCustomerNameOrderASC(name);
+    }
+    public List<Order> GetOrdersbyStoreFrontIdOrderDESC(int storeFrontID)
+    {
+        return _dl.GetOrdersbyStoreFrontIdOrderDESC(storeFrontID);
+    }
+
+    public List<Order> GetOrdersbyStoreFrontIdOrderASC(int storeFrontID)
+    {
+        return _dl.GetOrdersbyStoreFrontIdOrderASC(storeFrontID);
+    }
+
+    public List<Order> GetOrdersbyStoreFrontIdTotalDESC(int storeFrontID)
+    {
+        return _dl.GetOrdersbyStoreFrontIdTotalDESC(storeFrontID);
+    }
+
+    public List<Order> GetOrdersbyStoreFrontIdTotalASC(int storeFrontID)
+    {
+        return _dl.GetOrdersbyStoreFrontIdOrderASC(storeFrontID);
     }
 }

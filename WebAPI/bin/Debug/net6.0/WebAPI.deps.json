@@ -9,6 +9,8 @@
       "WebAPI/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "6.0.0",
+          "Serilog": "2.10.0",
+          "Serilog.Sinks.File": "5.0.0",
           "Swashbuckle.AspNetCore": "6.2.3",
           "YarnBL": "1.0.0",
           "YarnDL": "1.0.0",
