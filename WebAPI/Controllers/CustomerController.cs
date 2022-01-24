@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using CustomExceptions;
+using Serilog;
 using Models;
 using BL;
 
@@ -13,6 +15,8 @@ namespace WebAPI.Controllers
     {
         private IBL _bl;
         private IMemoryCache _memoryCache;
+        
+
         public CustomerController(IBL bl, IMemoryCache memoryCache)
         {
             _bl = bl;
@@ -32,36 +36,49 @@ namespace WebAPI.Controllers
             
         }
 
-        //// GET api/<CustomerController>/5
-        //[HttpGet("{id}")]
-        //public ActionResult<Customer> Get(int id)
-        //{
-        //    Customer foundCust = _bl.GetCustomerbyId(id);
-        //    if(foundCust.ID > -1)
-        //    {
-        //        return Ok(foundCust);
-        //    }
-        //    else
-        //    {
-        //        return NoContent();
-        //    }
-        //}
-        [HttpGet("orders new to old by {name}")]
+        //POST api/<CustomerController>
+        [HttpPost]
+        public ActionResult Post([FromBody] Customer customerToAdd)
+        {
+            try
+            {
+                _bl.AddCustomer(customerToAdd);
+                return Created("Customer sucessfully added", customerToAdd);
+            }
+            catch (DuplicateRecordException ex)
+            {
+                return Conflict(ex.Message);
+            }
+        }
+
+        //GET api/<CustomerController>/5
+        [HttpGet("Login {email} and {password}")]
+        public ActionResult<Customer> Login(string name, string email, string password)
+        {
+            if(_bl.Login(name, email, password))
+            {
+                return Ok("Your login information is correct!");
+            }
+            else
+            {
+                return BadRequest("Your login information is incorrect");
+            }
+        }
+        // GET api/<CustomerController>/5
+        [HttpGet("{name}")]
         public ActionResult<Customer> Get(string name)
         {
             Customer foundCust = _bl.GetCustomerbyName(name);
-            //if(foundCust.ID > -1)
-            //{
-            //    return NoContent();
-            //}
-            List<Order> allOrders = _bl.GetOrdersbyCustomerNameOrderDESC(name);
-            if(allOrders.Count == 0)
+            if (foundCust.ID != 0)
+            {
+                return Ok(foundCust);
+            }
+            else
             {
                 return NoContent();
             }
-            return Ok(allOrders);
         }
-        [HttpGet("orders old to new by {name}")]
+        [HttpGet("orders sorted with Customer {name}")]
         public ActionResult<Order> GetCustomerOrders(string name, string sort)
         {
             Customer foundCust = _bl.GetCustomerbyName(name);
@@ -83,7 +100,7 @@ namespace WebAPI.Controllers
                 }
                 return Ok(allOrders);
             }
-            else if(sort == "higer") 
+            else if(sort == "lower") 
             {
                 List<Order> allOrders = _bl.GetOrdersbyCustomerNameTotalDESC(name);
                 if(allOrders.Count == 0)
@@ -92,7 +109,7 @@ namespace WebAPI.Controllers
                 }
                 return Ok(allOrders);
             }
-            else if(sort == "lower")
+            else if(sort == "higher")
             {
                 List<Order> allOrders = _bl.GetOrdersbyCustomerNameTotalASC(name);
                 if(allOrders.Count == 0)
@@ -105,38 +122,6 @@ namespace WebAPI.Controllers
             {
                 return BadRequest();
             }
-            // if(selection == "ASC")
-            // {
-            //     List<Order> allOrders = _bl.GetOrdersbyCustomerNameOrderASC(name);
-            //     if(allOrders.Count == 0)
-            //     {
-            //         return NoContent();
-            //     }
-            //     return Ok(allOrders);
-            // }
-        }
-
-        //// GET api/<CustomerController>/5
-        //[HttpGet("{name}")]
-        //public ActionResult<Customer> Get(string name)
-        //{
-        //    Customer foundCust = _bl.GetCustomerbyName(name);
-        //    if (foundCust.ID > -1)
-        //    {
-        //        return Ok(foundCust);
-        //    }
-        //    else
-        //    {
-        //        return NoContent();
-        //    }
-        //}
-
-        // POST api/<CustomerController>
-        [HttpPost]
-        public ActionResult Post([FromBody] Customer customerToAdd)
-        {
-                _bl.AddCustomer(customerToAdd);  
-                return Created("Customer sucessfully added", customerToAdd);
         }
 
         // PUT api/<CustomerController>/5

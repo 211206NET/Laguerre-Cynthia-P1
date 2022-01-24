@@ -192,7 +192,7 @@ public class DBRepo : IRepo
         cmdAddInvent.Parameters.AddWithValue("@desc", inventoryToAdd.ProductDescription);
         cmdAddInvent.Parameters.AddWithValue("@price", inventoryToAdd.ProductPrice);
         cmdAddInvent.ExecuteNonQuery();
-        //Log.Information($"An inventory item with store Id {inventoryToAdd.StoreFrontID} and product name {inventoryToAdd.Item.ProductName} of amount {inventoryToAdd.Quantity} was added.");
+        Log.Information($"An inventory item with store Id {inventoryToAdd.StoreFrontID} and product name {inventoryToAdd.ProductName} of amount {inventoryToAdd.Quantity} was added.");
         connection.Close();
     }
 
@@ -318,7 +318,7 @@ public class DBRepo : IRepo
         cmdAddLineItem.Parameters.AddWithValue("@price", lineItemToAdd.ProductPrice);
         cmdAddLineItem.Parameters.AddWithValue("@qty", lineItemToAdd.Quantity);
         cmdAddLineItem.Parameters.AddWithValue("@orderId", lineItemToAdd.OrderID);
-        //Log.Information($"An lineitem with product id {lineItemToAdd.Item.ID} and quantity {lineItemToAdd.Quantity} was add to Cart.");
+        Log.Information($"An lineitem with product id {lineItemToAdd.InventoryID} and quantity {lineItemToAdd.Quantity} was add to Cart.");
         cmdAddLineItem.ExecuteNonQuery();
         connection.Close();
     }
@@ -498,6 +498,39 @@ public class DBRepo : IRepo
             
         }
         return inventories;
+    }
+
+    public List<Order> GetOrdersbyStoreId(int storeFrontID)
+    {
+        string selectcmd = "Select * From Orders Where StoreFrontId = @storeID";
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        SqlParameter param = new SqlParameter("@storeID", storeFrontID);
+        cmd.Parameters.Add(param);
+
+        DataSet inventSet = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+        adapter.Fill(inventSet, "orders");
+
+        DataTable? inventTable = inventSet.Tables["orders"];
+
+        List<Order> orders = new List<Order>();
+        foreach (DataRow row in inventTable.Rows)
+        {
+            orders.Add(new Order
+            {
+                ID = (int)row["Id"],
+                StoreFrontID = (int)row["StoreFrontId"],
+                OrderDate = (DateTime)row["OrderDate"],
+                CustomerID = (int)row["CustomerId"],
+                Total = (decimal)row["Total"]
+
+        });
+
+        }
+        return orders;
     }
 
     public Order GetOrderbyId(int orderID)
@@ -884,5 +917,22 @@ public class DBRepo : IRepo
             }
         }
         return allOrders;
+    }
+        public bool IsDuplicate(Customer customer)
+    {
+        string searchQuery = $"SELECT * FROM Customer WHERE Name='{customer.Name}' AND Email='{customer.Email}' AND Password='{customer.Password}'";
+        
+        using SqlConnection connection = new SqlConnection(_connectionString);
+        using SqlCommand cmd = new SqlCommand(searchQuery, connection);
+
+        connection.Open();
+
+        using SqlDataReader reader = cmd.ExecuteReader();
+
+        if(reader.HasRows)
+        {
+            return true;
+        }
+        return false;
     }
 }

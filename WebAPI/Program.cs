@@ -1,6 +1,7 @@
 using DL;
 using BL;
 using Serilog;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,10 @@ builder.Services.AddScoped<IRepo>(ctx => new DBRepo(builder.Configuration.GetCon
 builder.Services.AddScoped<IBL, CYFBL>();
 
 //logging
-
+builder.Host.UseSerilog((context, config) =>
+{
+    config.WriteTo.File("../YarnDL/LoggingInfo.txt");
+});
 
 var app = builder.Build();
 

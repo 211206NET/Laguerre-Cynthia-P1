@@ -45,6 +45,8 @@ namespace WebAPI.Controllers
         [HttpPost]
         public void Post(string name, int storeFrontID, [FromBody] Order orderToAdd)
         {
+            Customer currCustomer = _bl.GetCustomerbyName(name);
+            int CustomerID = currCustomer.ID;
             string OrderDate = DateTime.Now.ToString();
             List<LineItem> lineItems = _bl.GetAllLineItems();
             _bl.AddOrder(name, storeFrontID, orderToAdd);

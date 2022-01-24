@@ -24,7 +24,11 @@ public class CYFBL : IBL
     /// <param name="customerToAdd">Customer object to add</param>
     public void AddCustomer(Customer customerToAdd)
     {
-        _dl.AddCustomer(customerToAdd);
+        if(!_dl.IsDuplicate(customerToAdd))
+        {
+            _dl.AddCustomer(customerToAdd);
+        }
+        else throw new DuplicateRecordException("A customer with same name, email and password already exists");
     }
 
 /// <summary>
@@ -214,5 +218,15 @@ public class CYFBL : IBL
     public List<Order> GetOrdersbyStoreFrontIdTotalASC(int storeFrontID)
     {
         return _dl.GetOrdersbyStoreFrontIdOrderASC(storeFrontID);
+    }
+
+    public List<Order> GetOrdersbyStoreId(int storeFrontID)
+    {
+        return _dl.GetOrdersbyStoreId(storeFrontID);
+    }
+
+    public bool Login(string name, string email, string password)
+    {
+        return _dl.Login(name, email, password);
     }
 }

@@ -40,6 +40,8 @@ namespace WebAPI.Controllers
         public ActionResult<StoreFront> Get(int id)
         {
             StoreFront foundStore = _bl.GetStoreFrontbyId(id);
+            foundStore.Inventories = _bl.GetInventoriesbyStoreId(id);
+            foundStore.Orders = _bl.GetOrdersbyStoreId(id);
                 if(foundStore.ID > -1)
             {
                 return Ok(foundStore);

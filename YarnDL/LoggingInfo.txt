@@ -289,3 +289,215 @@
 2022-01-12 11:59:01.301 -05:00 [INF] An inventory item with id 44915 store Id 7492 and product name Wool Yarn of amount 20 was added.
 2022-01-12 11:59:16.673 -05:00 [INF] The item with Inventory ID 44915 was increase to Quantity 25
 2022-01-12 12:00:30.654 -05:00 [INF] A store  with Id 20511 store name White Plain's CYF was added.
+2022-01-24 15:13:03.654 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 15:13:03.662 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 15:13:03.664 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 15:13:03.665 -05:00 [INF] Hosting environment: Development
+2022-01-24 15:13:03.665 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 15:13:05.519 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 15:13:05.866 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 350.1184ms
+2022-01-24 15:13:05.885 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 15:13:05.888 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 3.4040ms
+2022-01-24 15:13:05.996 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 15:13:06.125 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 129.1940ms
+2022-01-24 15:13:42.961 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Customer application/json 77
+2022-01-24 15:13:42.972 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 15:13:42.998 -05:00 [INF] Route matched with {action = "Post", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.Customer) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 15:13:43.812 -05:00 [INF] A customer with and name name and email email was added
+2022-01-24 15:13:43.822 -05:00 [INF] Executing CreatedResult, writing value of type 'Models.Customer'.
+2022-01-24 15:13:43.830 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Post (WebAPI) in 827.2743ms
+2022-01-24 15:13:43.831 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 15:13:43.831 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Customer application/json 77 - 201 - application/json;+charset=utf-8 870.2104ms
+2022-01-24 15:16:19.165 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 15:16:19.174 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 15:16:19.178 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 15:16:19.178 -05:00 [INF] Hosting environment: Development
+2022-01-24 15:16:19.178 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 15:16:20.826 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 15:16:21.215 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 392.1260ms
+2022-01-24 15:16:21.217 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 15:16:21.235 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 17.7456ms
+2022-01-24 15:16:21.366 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 15:16:21.517 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.6446ms
+2022-01-24 15:16:49.049 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Customer application/json 76
+2022-01-24 15:16:49.059 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 15:16:49.086 -05:00 [INF] Route matched with {action = "Post", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.Customer) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 15:16:49.094 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Post (WebAPI) in 4.0126ms
+2022-01-24 15:16:49.097 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 15:16:49.102 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'WebAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-24 15:16:49.189 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Customer application/json 76 - 500 - text/plain;+charset=utf-8 140.7079ms
+2022-01-24 15:27:46.096 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 15:27:46.105 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 15:27:46.108 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 15:27:46.109 -05:00 [INF] Hosting environment: Development
+2022-01-24 15:27:46.109 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 15:27:47.410 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 15:27:47.762 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 15:27:47.763 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 356.0476ms
+2022-01-24 15:27:47.777 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 14.3798ms
+2022-01-24 15:27:47.890 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 15:27:48.028 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.2265ms
+2022-01-24 15:28:40.939 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/StoreFront application/json 116
+2022-01-24 15:28:40.955 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Post (WebAPI)'
+2022-01-24 15:28:40.976 -05:00 [INF] Route matched with {action = "Post", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.StoreFront) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 15:28:41.025 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-24 15:28:41.036 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Post (WebAPI) in 54.8448ms
+2022-01-24 15:28:41.037 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Post (WebAPI)'
+2022-01-24 15:28:41.037 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/StoreFront application/json 116 - 400 - application/problem+json;+charset=utf-8 98.1635ms
+2022-01-24 15:28:49.862 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/StoreFront application/json 115
+2022-01-24 15:28:49.864 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Post (WebAPI)'
+2022-01-24 15:28:49.864 -05:00 [INF] Route matched with {action = "Post", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.StoreFront) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 15:28:50.577 -05:00 [INF]  Store name White Plain's CYF was added.
+2022-01-24 15:28:50.581 -05:00 [INF] Executing CreatedResult, writing value of type 'Models.StoreFront'.
+2022-01-24 15:28:50.583 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Post (WebAPI) in 718.9325ms
+2022-01-24 15:28:50.583 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Post (WebAPI)'
+2022-01-24 15:28:50.583 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/StoreFront application/json 115 - 201 - application/json;+charset=utf-8 720.9507ms
+2022-01-24 15:29:30.777 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront - -
+2022-01-24 15:29:30.777 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 15:29:30.780 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature System.Collections.Generic.List`1[Models.StoreFront] Get() on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 15:29:31.144 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.StoreFront, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 15:29:31.153 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 372.6311ms
+2022-01-24 15:29:31.153 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 15:29:31.153 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront - - - 200 - application/json;+charset=utf-8 376.1808ms
+2022-01-24 15:30:36.251 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 204
+2022-01-24 15:30:36.252 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 15:30:36.267 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 15:30:36.313 -05:00 [INF] An inventory item with store Id 1 and product name Chunky Yarn of amount 40 was added.
+2022-01-24 15:30:36.314 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 46.6236ms
+2022-01-24 15:30:36.314 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 15:30:36.314 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 204 - 200 0 - 64.8381ms
+2022-01-24 15:30:45.330 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 204
+2022-01-24 15:30:45.330 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 15:30:45.331 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 15:30:45.450 -05:00 [INF] An inventory item with store Id 2 and product name Chunky Yarn of amount 40 was added.
+2022-01-24 15:30:45.450 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 119.5257ms
+2022-01-24 15:30:45.450 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 15:30:45.450 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 204 - 200 0 - 120.3112ms
+2022-01-24 15:30:53.462 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/3 application/json 204
+2022-01-24 15:30:53.462 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 15:30:53.462 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 15:30:53.500 -05:00 [INF] An inventory item with store Id 3 and product name Chunky Yarn of amount 40 was added.
+2022-01-24 15:30:53.500 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 38.5596ms
+2022-01-24 15:30:53.501 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 15:30:53.501 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/3 application/json 204 - 200 0 - 39.2063ms
+2022-01-24 15:41:10.205 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 15:41:10.213 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 15:41:10.215 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 15:41:10.216 -05:00 [INF] Hosting environment: Development
+2022-01-24 15:41:10.216 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 15:41:11.292 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 15:41:11.593 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 15:41:11.594 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 302.8599ms
+2022-01-24 15:41:11.610 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 16.0514ms
+2022-01-24 15:41:11.732 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 15:41:11.855 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 123.4374ms
+2022-01-24 15:42:11.489 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Customer application/json 92
+2022-01-24 15:42:11.509 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 15:42:11.527 -05:00 [INF] Route matched with {action = "Post", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.Customer) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 15:42:12.326 -05:00 [INF] A customer with and name Cynthia and email clag@yahoo.com was added
+2022-01-24 15:42:12.335 -05:00 [INF] Executing CreatedResult, writing value of type 'Models.Customer'.
+2022-01-24 15:42:12.342 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Post (WebAPI) in 810.4115ms
+2022-01-24 15:42:12.342 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 15:42:12.343 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Customer application/json 92 - 201 - application/json;+charset=utf-8 853.5308ms
+2022-01-24 15:46:44.116 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 15:46:44.125 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 15:46:44.128 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 15:46:44.129 -05:00 [INF] Hosting environment: Development
+2022-01-24 15:46:44.129 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 15:46:45.435 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 15:46:45.883 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 452.9613ms
+2022-01-24 15:46:45.909 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 15:46:45.913 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 4.2068ms
+2022-01-24 15:46:46.141 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 15:46:46.298 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.8563ms
+2022-01-24 15:47:52.647 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Login clag@gmail.com and passtheword?name=Cynthia - -
+2022-01-24 15:47:52.656 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 15:47:52.679 -05:00 [INF] Route matched with {action = "Login", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Login(System.String, System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 15:47:53.460 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2022-01-24 15:47:53.465 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Login (WebAPI) in 782.5687ms
+2022-01-24 15:47:53.466 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 15:47:53.467 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Login clag@gmail.com and passtheword?name=Cynthia - - - 400 - text/plain;+charset=utf-8 820.2136ms
+2022-01-24 15:48:04.532 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Login clag@yahoo.com and passtheword?name=Cynthia - -
+2022-01-24 15:48:04.534 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 15:48:04.534 -05:00 [INF] Route matched with {action = "Login", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Login(System.String, System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 15:48:04.688 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-01-24 15:48:04.688 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Login (WebAPI) in 153.7254ms
+2022-01-24 15:48:04.688 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 15:48:04.688 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Login clag@yahoo.com and passtheword?name=Cynthia - - - 200 - text/plain;+charset=utf-8 156.5968ms
+2022-01-24 15:49:24.708 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Marie - -
+2022-01-24 15:49:24.709 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 15:49:24.718 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 15:49:24.765 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2022-01-24 15:49:24.765 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 46.9297ms
+2022-01-24 15:49:24.765 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 15:49:24.765 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Marie - - - 204 - - 57.3634ms
+2022-01-24 15:49:32.934 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Marie - -
+2022-01-24 15:49:32.935 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 15:49:32.935 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 15:49:32.977 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2022-01-24 15:49:32.977 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 40.1813ms
+2022-01-24 15:49:32.977 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 15:49:32.977 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Marie - - - 204 - - 47.2572ms
+2022-01-24 15:49:37.836 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 15:49:37.836 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 15:49:37.837 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 15:49:37.990 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2022-01-24 15:49:37.990 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 153.403ms
+2022-01-24 15:49:37.990 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 15:49:37.991 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 204 - - 155.1222ms
+2022-01-24 15:50:27.433 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 15:50:27.442 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 15:50:27.445 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 15:50:27.445 -05:00 [INF] Hosting environment: Development
+2022-01-24 15:50:27.445 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 15:50:28.650 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 15:50:29.002 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 15:50:29.004 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 355.4483ms
+2022-01-24 15:50:29.021 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 18.4029ms
+2022-01-24 15:50:29.155 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 15:50:29.282 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 127.0029ms
+2022-01-24 15:50:37.098 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 15:50:37.106 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 15:50:37.132 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 15:50:37.917 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 15:50:37.925 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 788.4485ms
+2022-01-24 15:50:37.926 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 15:50:37.927 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 200 - application/json;+charset=utf-8 828.9020ms
+2022-01-24 15:51:37.487 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 15:51:37.499 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 15:51:37.504 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 15:51:37.504 -05:00 [INF] Hosting environment: Development
+2022-01-24 15:51:37.504 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 15:51:38.772 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 15:51:39.138 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 370.3075ms
+2022-01-24 15:51:39.139 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 15:51:39.156 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 16.4443ms
+2022-01-24 15:51:39.284 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 15:51:39.417 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 132.6454ms
+2022-01-24 15:51:54.911 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 15:51:54.918 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 15:51:54.921 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 15:51:54.921 -05:00 [INF] Hosting environment: Development
+2022-01-24 15:51:54.921 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 15:51:56.572 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 15:51:56.937 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 15:51:56.938 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 370.6240ms
+2022-01-24 15:51:56.953 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 16.1897ms
+2022-01-24 15:51:57.067 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 15:51:57.201 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.8519ms

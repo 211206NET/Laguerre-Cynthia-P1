@@ -59,4 +59,6 @@ public interface IBL
     List<Order> GetOrdersbyStoreFrontIdTotalDESC(int storeFrontID);
 
     List<Order> GetOrdersbyStoreFrontIdTotalASC(int storeFrontID);
+    List<Order> GetOrdersbyStoreId(int storeFrontID);
+    bool Login(string name, string email, string password);
 }
