@@ -59,29 +59,6 @@ public class ModelsTest
         Assert.Equal(state, testStoreFront.State);
     }
 
-    // [Fact]
-    // public void InventoryShouldSetValidData()
-    // {
-    //     //Arrange
-    //     Inventory testInventory = new Inventory();
-
-    //     string inventoryName = "Test Inventory Name";
-    //     string color = "Test color";
-    //     string description = "Test description";
-
-    //     //Act
-
-    //     testInventory.InventoryName = inventoryName;
-    //     testInventory.Color = color;
-    //     testInventory.Description = description;
-
-    //     //Assert
-
-    //     Assert.Equal(inventoryName, testInventory.InventoryName);
-    //     Assert.Equal(color, testInventory.Color);
-    //     Assert.Equal(description, testInventory.Description);
-    // }
-
         [Fact]
     public void ProductShouldSetValidData()
     {
@@ -104,11 +81,6 @@ public class ModelsTest
         Assert.Equal(color, testProduct.Color);
         Assert.Equal(description, testProduct.Description);
     }
-
-    // [Fact]
-    // public void CustomerShouldBeAbleToSignIn()
-    // {
-    //     //Assert
 
 
     [Theory]
@@ -147,37 +119,7 @@ public class ModelsTest
 
     }
 
-// [Fact]
-// public void StoreShouldhaveCustomToStringMethod()
-// {
-//     //Arrange 
-//     StoreFront testStoreFront = new StoreFront{
-//         Name = "Test Name",
-//         Address = "Test Address",
-//         City = "Test City",
-//         State = "Test State",
-//     };
-//     string expectedOutput = "Name: Test Name \nAddress: Test Address \nCity: Test City \nState: Test State";
-//     Assert.Equal(expectedOutput, testStoreFront.Tostring());
-// }
-
-
-// [Fact]
-// public void OrderShouldhaveCustomToStringMethod()
-// {
-//     //Arrange 
-//     Order testOrder = new Order{
-//         ID = 9836,
-//         Name = "Tests Name",
-//         Color = "Test Color",
-//         Description = "Test Description",
-//         Price = 4.50,
-//     };
-//     string expectedOutput = "Name: Test Name \nColor: Test Color \nDescription: Test Description \nPrice: 4.50";
-//     Assert.Equal(expectedOutput, testOrder.Tostring());
-// }
-
-[Fact]
+    [Fact]
     public void StoreInventoryShouldBeAbleToBeSet()
     {
         //Arrange

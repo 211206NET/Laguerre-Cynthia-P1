@@ -501,3 +501,64 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
 2022-01-24 15:51:56.953 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 16.1897ms
 2022-01-24 15:51:57.067 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
 2022-01-24 15:51:57.201 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.8519ms
+2022-01-24 19:38:22.577 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 19:38:22.585 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 19:38:22.588 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 19:38:22.589 -05:00 [INF] Hosting environment: Development
+2022-01-24 19:38:22.589 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 19:38:24.167 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 19:38:24.641 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 477.0365ms
+2022-01-24 19:38:24.643 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 19:38:24.665 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 22.1191ms
+2022-01-24 19:38:24.796 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 19:38:24.944 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 148.6503ms
+2022-01-24 19:38:39.339 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/1 - -
+2022-01-24 19:38:39.369 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 19:38:39.423 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 19:38:41.396 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 19:38:41.435 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 2003.309ms
+2022-01-24 19:38:41.437 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 19:38:41.438 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/1 - - - 200 - application/json;+charset=utf-8 2098.3433ms
+2022-01-24 19:39:07.667 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/2 - -
+2022-01-24 19:39:07.671 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 19:39:07.672 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 19:39:07.947 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 19:39:07.948 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 276.0398ms
+2022-01-24 19:39:07.948 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 19:39:07.949 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/2 - - - 200 - application/json;+charset=utf-8 282.0636ms
+2022-01-24 19:39:34.208 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 19:39:34.221 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 19:39:34.225 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 19:39:34.226 -05:00 [INF] Hosting environment: Development
+2022-01-24 19:39:34.226 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 19:39:36.448 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 19:39:37.044 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 605.7870ms
+2022-01-24 19:39:37.044 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 19:39:37.065 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 21.3589ms
+2022-01-24 19:39:37.230 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 19:39:37.447 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 216.5740ms
+2022-01-24 19:39:46.089 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 19:39:46.107 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 19:39:46.168 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 19:39:47.614 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 19:39:47.634 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 1454.0987ms
+2022-01-24 19:39:47.637 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 19:39:47.637 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 200 - application/json;+charset=utf-8 1548.9305ms
+2022-01-24 19:44:42.441 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 19:44:42.452 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 19:44:42.456 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 19:44:42.456 -05:00 [INF] Hosting environment: Development
+2022-01-24 19:44:42.457 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 19:44:44.015 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 19:44:44.420 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 408.0516ms
+2022-01-24 19:44:44.422 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 19:44:44.442 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 19.8029ms
+2022-01-24 19:44:44.581 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 19:44:44.749 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 168.0639ms
+2022-01-24 19:45:06.084 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/1 - -
+2022-01-24 19:45:06.105 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 19:45:06.151 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 19:45:07.837 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 19:45:07.870 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 1710.3339ms
+2022-01-24 19:45:07.872 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 19:45:07.872 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/1 - - - 200 - application/json;+charset=utf-8 1788.1727ms

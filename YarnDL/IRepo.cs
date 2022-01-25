@@ -58,4 +58,5 @@ public interface IRepo
     bool Login(string name, string email, string password);
 
     bool IsDuplicate(Customer customer);
+    List<Order> GetOrdersbyCustomerName(string name);
 }

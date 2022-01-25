@@ -24,10 +24,6 @@ public interface IBL
     void AddInventory(int storeFrontID, Inventory inventoryToAdd);
 
     void EditLineItem(int lineItemID, int orderID);
-
-    //List<Product> GetAllProducts();
-
-    //void AddProduct(int storeFrontID, Product productToAdd);
     
     void AddMoreInventory(int inventoryID, int addQuantity);
 
@@ -38,7 +34,9 @@ public interface IBL
     Inventory GetInventorybyId(int orderID);
 
     List<Inventory> GetInventoriesbyStoreId(int storeFrontID);
+
     Order GetOrderbyId(int orderID);
+
     void AddOrder(string name, int storeFrontID, Order orderToAdd);
 
     List<LineItem> GetLineItemsbyOrderId(int orderID);
@@ -59,6 +57,10 @@ public interface IBL
     List<Order> GetOrdersbyStoreFrontIdTotalDESC(int storeFrontID);
 
     List<Order> GetOrdersbyStoreFrontIdTotalASC(int storeFrontID);
+
     List<Order> GetOrdersbyStoreId(int storeFrontID);
+
     bool Login(string name, string email, string password);
+
+    public List<Order> GetOrdersbyCustomerName(string name);
 }

@@ -11,7 +11,10 @@ public class DBRepo : IRepo
         _connectionString = connectionString;
         //Console.WriteLine(_connectionString);
     }
-
+/// <summary>
+/// Gets all Customers
+/// </summary>
+/// <returns>all Customers</returns>
     public List<Customer> GetAllCustomers()
     {
         List<Customer> allCustomers = new List<Customer>();
@@ -64,6 +67,10 @@ public class DBRepo : IRepo
         return allCustomers;
     }
 
+/// <summary>
+/// Adds customer to database
+/// </summary>
+/// <param name="customerToAdd">Customer object</param>
     public void AddCustomer(Customer customerToAdd)
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
@@ -78,6 +85,10 @@ public class DBRepo : IRepo
         connection.Close();
     }
 
+/// <summary>
+/// Gets List of all store fronts
+/// </summary>
+/// <returns>store front</returns>
     public List<StoreFront> GetAllStoreFronts()
     {
         List<StoreFront> allStoreFronts = new List<StoreFront>();
@@ -135,6 +146,10 @@ public class DBRepo : IRepo
         return allStoreFronts;
     }
 
+/// <summary>
+/// adds store front to database
+/// </summary>
+/// <param name="storeFrontToAdd">store front object</param>
     public void AddStoreFront(StoreFront storeFrontToAdd)
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
@@ -150,7 +165,10 @@ public class DBRepo : IRepo
         connection.Close();
     }
 
-
+/// <summary>
+/// Gets list of all inventories
+/// </summary>
+/// <returns>all inventories</returns>
         public List<Inventory> GetAllInventories()
     {
         List<Inventory> allInventories = new List<Inventory>();
@@ -176,6 +194,12 @@ public class DBRepo : IRepo
         }
         return allInventories;
     }
+
+    /// <summary>
+    /// Adds inventory to store
+    /// </summary>
+    /// <param name="storeFrontID">store front object</param>
+    /// <param name="inventoryToAdd">inventory object</param>
     public void AddInventory(int storeFrontID, Inventory inventoryToAdd)
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
@@ -196,6 +220,10 @@ public class DBRepo : IRepo
         connection.Close();
     }
 
+/// <summary>
+/// Gets all orders
+/// </summary>
+/// <returns>all orders</returns>
     public List<Order> GetAllOrders()
     {
         List<Order> allOrders = new List<Order>();
@@ -230,6 +258,11 @@ public class DBRepo : IRepo
         }
         return allOrders;
     }
+
+    /// <summary>
+    /// add order to database
+    /// </summary>
+    /// <param name="orderToAdd">order object</param>
     public void AddOrder(Order orderToAdd)
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
@@ -245,6 +278,13 @@ public class DBRepo : IRepo
         Log.Information($"An order item with id {orderToAdd.ID} store Id {orderToAdd.StoreFrontID} and customer Id {orderToAdd.CustomerID} of amount {orderToAdd.Total} was added.");
         connection.Close();
     }
+
+    /// <summary>
+    /// adds order to customer and store front
+    /// </summary>
+    /// <param name="name">customer object</param>
+    /// <param name="storeFrontID">store front object</param>
+    /// <param name="orderToAdd">order object</param>
     public void AddOrder(string name, int storeFrontID, Order orderToAdd)
     {
         //Order newOrder = new Order();
@@ -268,6 +308,10 @@ public class DBRepo : IRepo
         connection.Close();
         }
 
+        /// <summary>
+        /// Adds new lineItem to the list
+        /// </summary>
+        /// <returns>Lineitem object to add</returns>
         public List<LineItem> GetAllLineItems()
     {
         List<LineItem> allLineItems = new List<LineItem>();
@@ -294,6 +338,10 @@ public class DBRepo : IRepo
         return allLineItems;
     }
 
+    /// <summary>
+    /// Adds a new lineItem to the list
+    /// </summary>
+    /// <param name="lineItemToAdd">lineitem object to add</param>
     public void AddLineItem(int orderID, int inventoryID, int quantity, LineItem lineItemToAdd)
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
@@ -323,6 +371,11 @@ public class DBRepo : IRepo
         connection.Close();
     }
 
+/// <summary>
+/// Edits the OrderID number from the lineItem
+/// </summary>
+/// <param name="lineItemID">lineItem object</param>
+/// <param name="orderID">order object to be changed</param>
     public void EditLineItem(int LineItemID, int OrderID)
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
@@ -338,6 +391,11 @@ public class DBRepo : IRepo
         connection.Close();
     }
 
+/// <summary>
+/// Adds quantity to inventory object
+/// </summary>
+/// <param name="inventoryID">Inventory ID</param>
+/// <param name="addQuantity">Quantity added</param>
     public void AddMoreInventory(int InventoryID, int addQuantity)
     {
         using SqlConnection connection = new SqlConnection(_connectionString);
@@ -353,6 +411,10 @@ public class DBRepo : IRepo
         
     }
 
+    /// <summary>
+    /// Gets a Customer by their Id
+    /// </summary>
+    /// <param name="customerID">Customer object</param>
     public Customer GetCustomerbyId(int customerID)
     {
         string query = "Select * From Customer Where Id = @custId";
@@ -377,6 +439,11 @@ public class DBRepo : IRepo
         return customer;
     }
 
+    /// <summary>
+    /// Gets a store front from its Id
+    /// </summary>
+    /// <param name="storeFrontID">Store front Object</param>
+    /// <returns>StoreFront</returns>
     public StoreFront GetStoreFrontbyId(int storeFrontID)
     {
         string query = "Select * From StoreFront Where Id = @storeID";
@@ -401,6 +468,12 @@ public class DBRepo : IRepo
         connection.Close();
         return store;
     }
+
+    /// <summary>
+    /// Gets inventory from Id
+    /// </summary>
+    /// <param name="inventoryID">inventory object</param>
+    /// <returns>inventory</returns>
     public Inventory GetInventorybyId(int inventoryID)
     {
         string query = "Select * From Inventory Where Id = @inventID";
@@ -427,10 +500,13 @@ public class DBRepo : IRepo
         }
         connection.Close();
         return invent;
-
     }
     
-
+    /// <summary>
+    /// Gets customer from Name
+    /// </summary>
+    /// <param name="name">Customer object</param>
+    /// <returns>Customer</returns>
     public Customer GetCustomerbyName(string name)
     {
         string query = "Select * From Customer Where Name = @name";
@@ -455,6 +531,13 @@ public class DBRepo : IRepo
         return customer;
     }
 
+    /// <summary>
+    /// Check if login information is in the database
+    /// </summary>
+    /// <param name="name">Customer object</param>
+    /// <param name="email">Customer object</param>
+    /// <param name="password">Customer object</param>
+    /// <returns></returns>
     public bool Login(string name, string email, string password)
     {
         Customer currentCust = GetCustomerbyName(name);
@@ -466,6 +549,11 @@ public class DBRepo : IRepo
         
     }
 
+    /// <summary>
+    /// Gets inventories of a Store by store Id
+    /// </summary>
+    /// <param name="storeFrontID">store front object</param>
+    /// <returns>inventory</returns>
     public List<Inventory> GetInventoriesbyStoreId(int storeFrontID)
     {
         string selectcmd = "Select * From Inventory Where StoreFrontId = @storeID";
@@ -500,37 +588,96 @@ public class DBRepo : IRepo
         return inventories;
     }
 
+    /// <summary>
+    /// Gets Orders by StoreFront Id 
+    /// </summary>
+    /// <param name="name">StoreFront object</param>
+    /// <returns>orders</returns>
     public List<Order> GetOrdersbyStoreId(int storeFrontID)
     {
         string selectcmd = "Select * From Orders Where StoreFrontId = @storeID";
+        string selectlinecmd = "Select * From LineItem Where StoreFrontId = @id2";
+
         SqlConnection connection = new SqlConnection(_connectionString);
         SqlCommand cmd = new SqlCommand(selectcmd, connection);
-        SqlParameter param = new SqlParameter("@storeID", storeFrontID);
-        cmd.Parameters.Add(param);
+        cmd.Parameters.AddWithValue("@storeID", storeFrontID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", storeFrontID);
 
-        DataSet inventSet = new DataSet();
+        DataSet CYFSET = new DataSet();
 
         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
 
-        adapter.Fill(inventSet, "orders");
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
 
-        DataTable? inventTable = inventSet.Tables["orders"];
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
 
-        List<Order> orders = new List<Order>();
-        foreach (DataRow row in inventTable.Rows)
+        List<Order> allOrders = new List<Order>();
+        if (orderTable != null)
         {
-            orders.Add(new Order
+            foreach (DataRow row in orderTable.Rows)
             {
-                ID = (int)row["Id"],
-                StoreFrontID = (int)row["StoreFrontId"],
-                OrderDate = (DateTime)row["OrderDate"],
-                CustomerID = (int)row["CustomerId"],
-                Total = (decimal)row["Total"]
-
-        });
-
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
         }
-        return orders;
+        return allOrders;
+    }
+    
+    /// <summary>
+    /// Gets Orders by Customer name  
+    /// </summary>
+    /// <param name="name">customer object</param>
+    /// <returns>orders</returns>
+    public List<Order> GetOrdersbyCustomerName(string name)
+    {
+        int customerID = (int)GetCustomerbyName(name).ID;
+
+        string selectcmd = "Select * From Orders Where CustomerId = @custID";
+        string selectlinecmd = "Select * From LineItem Where CustomerId = @id2";
+
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand cmd = new SqlCommand(selectcmd, connection);
+        cmd.Parameters.AddWithValue("@custID", customerID);
+        SqlCommand linecmd = new SqlCommand(selectlinecmd, connection);
+        linecmd.Parameters.AddWithValue("@id2", customerID);
+
+        DataSet CYFSET = new DataSet();
+
+        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+        SqlDataAdapter lineAdapter = new SqlDataAdapter(linecmd);
+
+        adapter.Fill(CYFSET, "Orders");
+        lineAdapter.Fill(CYFSET, "LineItem");
+
+        DataTable? orderTable = CYFSET.Tables["Orders"];
+        DataTable? lineItemTable = CYFSET.Tables["LineItem"];
+
+        List<Order> allOrders = new List<Order>();
+        if (orderTable != null)
+        {
+            foreach (DataRow row in orderTable.Rows)
+            {
+                Order custOrder = new Order(row);
+                if (lineItemTable != null)
+                {
+                    custOrder.LineItems = lineItemTable.AsEnumerable().Where(r => (int)r["OrdersId"] == custOrder.ID).Select(
+                        r => new LineItem(r)
+                    ).ToList();
+                }
+                allOrders.Add(custOrder);
+            }
+        }
+        return allOrders;
     }
 
     public Order GetOrderbyId(int orderID)
@@ -598,6 +745,11 @@ public class DBRepo : IRepo
         return lineItems;
     }
 
+    /// <summary>
+    /// Gets Orders by Customer name by time 
+    /// </summary>
+    /// <param name="name">customer object</param>
+    /// <returns>orders</returns>
     public List<Order> GetOrdersbyCustomerNameOrderDESC(string name)
     {
         int customerID = (int)GetCustomerbyName(name).ID;
@@ -639,6 +791,11 @@ public class DBRepo : IRepo
         return allOrders;
     }
 
+    /// <summary>
+    /// Gets Orders by Customer name by time 
+    /// </summary>
+    /// <param name="name">customer object</param>
+    /// <returns>orders</returns>
     public List<Order> GetOrdersbyCustomerNameOrderASC(string name)
     {
         int customerID = (int)GetCustomerbyName(name).ID;
@@ -680,6 +837,11 @@ public class DBRepo : IRepo
         return allOrders;
     }
 
+    /// <summary>
+    /// Gets Orders by Customer name by total 
+    /// </summary>
+    /// <param name="name">customer object</param>
+    /// <returns>orders</returns>
     public List<Order> GetOrdersbyCustomerNameTotalDESC(string name)
     {
         int customerID = (int)GetCustomerbyName(name).ID;
@@ -721,6 +883,11 @@ public class DBRepo : IRepo
         return allOrders;
     }
 
+    /// <summary>
+    /// Gets Orders by Customer name by total 
+    /// </summary>
+    /// <param name="name">customer object</param>
+    /// <returns>orders</returns>
     public List<Order> GetOrdersbyCustomerNameTotalASC(string name)
     {
         int customerID = (int)GetCustomerbyName(name).ID;
@@ -762,6 +929,11 @@ public class DBRepo : IRepo
         return allOrders;
     }
 
+    /// <summary>
+    /// Gets Orders by store id by time 
+    /// </summary>
+    /// <param name="id">store object</param>
+    /// <returns>orders</returns>
     public List<Order> GetOrdersbyStoreFrontIdOrderDESC(int storeFrontID)
     {
 
@@ -802,6 +974,11 @@ public class DBRepo : IRepo
         return allOrders;
     }
 
+    /// <summary>
+    /// Gets Orders by store id by time 
+    /// </summary>
+    /// <param name="id">store object</param>
+    /// <returns>orders</returns>
     public List<Order> GetOrdersbyStoreFrontIdOrderASC(int storeFrontID)
     {
         string selectcmd = "Select * From Orders Where StoreFrontId = @storeID Order By OrderDate ASC";
@@ -841,6 +1018,11 @@ public class DBRepo : IRepo
         return allOrders;
     }
 
+    /// <summary>
+    /// Gets Orders by store id by total 
+    /// </summary>
+    /// <param name="id">store object</param>
+    /// <returns>orders</returns>
     public List<Order> GetOrdersbyStoreFrontIdTotalDESC(int storeFrontID)
     {
         string selectcmd = "Select * From Orders Where StoreFrontId = @storeID Order By Total DESC";
@@ -880,6 +1062,11 @@ public class DBRepo : IRepo
         return allOrders;
     }
 
+    /// <summary>
+    /// Gets Orders by store id by total 
+    /// </summary>
+    /// <param name="id">store object</param>
+    /// <returns>orders</returns>
     public List<Order> GetOrdersbyStoreFrontIdTotalASC(int storeFrontID)
     {
         string selectcmd = "Select * From Orders Where StoreFrontId = @storeID Order By Total ASC";
@@ -918,7 +1105,13 @@ public class DBRepo : IRepo
         }
         return allOrders;
     }
-        public bool IsDuplicate(Customer customer)
+
+    /// <summary>
+    /// Checks if a Customer is repeated
+    /// </summary>
+    /// <param name="customer">customer object</param>
+    /// <returns>booleanS</returns>
+    public bool IsDuplicate(Customer customer)
     {
         string searchQuery = $"SELECT * FROM Customer WHERE Name='{customer.Name}' AND Email='{customer.Email}' AND Password='{customer.Password}'";
         
