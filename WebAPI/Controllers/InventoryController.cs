@@ -12,22 +12,15 @@ namespace WebAPI.Controllers
     public class InventoryController : ControllerBase
     {
         private IBL _bl;
-        private IMemoryCache _memoryCache;
-        public InventoryController(IBL bl, IMemoryCache memoryCache)
+        public InventoryController(IBL bl)
         {
             _bl = bl;
-            _memoryCache = memoryCache;
         }
         // GET: api/<InventoryController>
         [HttpGet]
         public List<Inventory> Get()
         {
-            List<Inventory> allInvent;
-            if (!_memoryCache.TryGetValue("inventory", out allInvent))
-            {
-                allInvent = _bl.GetAllInventories();
-                _memoryCache.Set("inventory", allInvent, new TimeSpan(0, 0, 30));
-            }
+            List<Inventory> allInvent = _bl.GetAllInventories();
             return allInvent;
         }
         /// <summary>

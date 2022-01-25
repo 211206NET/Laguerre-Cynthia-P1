@@ -26,14 +26,14 @@ namespace WebAPI.Controllers
         }
 
         // GET api/<LineItemController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("Line Order by {orderID}")]
+        public List<LineItem> Get(int orderID)
         {
-            return "value";
+            return _bl.GetLineItemsbyOrderId(orderID);
         }
 
         // POST api/<LineItemController>
-        [HttpPost("Update LineItem by {orderID}")]
+        [HttpPost("Create LineItem by {orderID}")]
         public void Post(int orderID, int inventoryID, int quantity, [FromBody] LineItem lineItemToAdd)
         {
             

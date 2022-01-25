@@ -109,56 +109,75 @@ public class ModelsTest
     // public void CustomerShouldBeAbleToSignIn()
     // {
     //     //Assert
-        
-    // }
-    // [Theory]
-    // [InlineData("$$2hr#a$%")]
-    // [InlineData("     ")]
-    // [InlineData(null)]
-    // [InlineData("")]
-    // public void CustomerShouldNotSetInvalidName(string input)
-    // {
-
-    //     //Arrange: 
-    //     Customer testCustomer = new Customer();
-
-    //     //Act: setting an invalid name as the customer
-
-    //     //Assert:
-    //     Assert.Throw<InputInvalidException>(() => testCustomer.Name = input);
-    // }
-
-    // [Fact]
-    // public void StoreShouldhaveCustomToStringMethod()
-    // {
-    //     //Arrange 
-    //     StoreFront testStoreFront = new StoreFront{
-    //         Name = "Test Name",
-    //         Address = "Test Address",
-    //         City = "Test City",
-    //         State = "Test State",
-    //     };
-    //     string expectedOutput = "Name: Test Name \nAddress: Test Address \nCity: Test City \nState: Test State";
-    //     Assert.Equal(expectedOutput, testStoreFront.Tostring());
-    // }
 
 
-    // [Fact]
-    // public void OrderShouldhaveCustomToStringMethod()
-    // {
-    //     //Arrange 
-    //     Order testOrder = new Order{
-    //         ID = 9836,
-    //         Name = "Tests Name",
-    //         Color = "Test Color",
-    //         Description = "Test Description",
-    //         Price = 4.50,
-    //     };
-    //     string expectedOutput = "Name: Test Name \nColor: Test Color \nDescription: Test Description \nPrice: 4.50";
-    //     Assert.Equal(expectedOutput, testOrder.Tostring());
-    // }
+    [Theory]
+    [InlineData(3)]
+    [InlineData(25)]
+    [InlineData(55)]
+    public void InventoryProductShouldHaveQuantity(int quantity)
+    {
 
-    [Fact]
+        //Arrange
+        Inventory testInventory = new Inventory();
+
+        //Act
+        testInventory.Quantity = quantity;
+
+        //Assert
+        Assert.Equal(testInventory.Quantity,quantity);
+
+    }
+
+    [Theory]
+    [InlineData(7)]
+    [InlineData(33)]
+    [InlineData(98)]
+    public void LineItemProductShouldHaveQuantity(int quantity)
+    {
+
+        //Arrange
+        LineItem testLineItem = new LineItem();
+
+        //Act
+        testLineItem.Quantity = quantity;
+
+        //Assert
+        Assert.Equal(testLineItem.Quantity,quantity);
+
+    }
+
+// [Fact]
+// public void StoreShouldhaveCustomToStringMethod()
+// {
+//     //Arrange 
+//     StoreFront testStoreFront = new StoreFront{
+//         Name = "Test Name",
+//         Address = "Test Address",
+//         City = "Test City",
+//         State = "Test State",
+//     };
+//     string expectedOutput = "Name: Test Name \nAddress: Test Address \nCity: Test City \nState: Test State";
+//     Assert.Equal(expectedOutput, testStoreFront.Tostring());
+// }
+
+
+// [Fact]
+// public void OrderShouldhaveCustomToStringMethod()
+// {
+//     //Arrange 
+//     Order testOrder = new Order{
+//         ID = 9836,
+//         Name = "Tests Name",
+//         Color = "Test Color",
+//         Description = "Test Description",
+//         Price = 4.50,
+//     };
+//     string expectedOutput = "Name: Test Name \nColor: Test Color \nDescription: Test Description \nPrice: 4.50";
+//     Assert.Equal(expectedOutput, testOrder.Tostring());
+// }
+
+[Fact]
     public void StoreInventoryShouldBeAbleToBeSet()
     {
         //Arrange

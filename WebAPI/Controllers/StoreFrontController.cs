@@ -15,23 +15,21 @@ namespace WebAPI.Controllers
     public class StoreFrontController : ControllerBase
     {
         private IBL _bl;
-        private IMemoryCache _memoryCache;
         
-        public StoreFrontController(IBL bl, IMemoryCache memoryCache)
+        
+        public StoreFrontController(IBL bl)
         {
             _bl = bl;
-            _memoryCache = memoryCache;
+            
         }
         // GET: api/<StoreFrontController>
         [HttpGet]
         public List<StoreFront> Get()
         {
             List<StoreFront> allStores;
-            if (!_memoryCache.TryGetValue("storeFront", out allStores))
-            {
+            
                 allStores = _bl.GetAllStoreFronts();
-                _memoryCache.Set("storeFront", allStores, new TimeSpan(0, 0, 30));
-            }
+            
             return allStores;
         }
 
