@@ -91,7 +91,7 @@ namespace WebAPI.Controllers
                 }
                 return Ok(allOrders);
             }
-            else if(sort == "lower")
+            else if(sort == "higher")
             {
                 List<Order> allOrders = _bl.GetOrdersbyStoreFrontIdTotalDESC(storeFrontID);
                 if(allOrders.Count == 0)
@@ -100,7 +100,7 @@ namespace WebAPI.Controllers
                 }
                 return Ok(allOrders);
             }
-            else if(sort == "higher")
+            else if(sort == "lower")
             {
                 List<Order> allOrders = _bl.GetOrdersbyStoreFrontIdTotalASC(storeFrontID);
                 if(allOrders.Count == 0)

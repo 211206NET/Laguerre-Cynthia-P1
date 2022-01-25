@@ -72,7 +72,7 @@ namespace WebAPI.Controllers
             foundCust.Orders = _bl.GetOrdersbyCustomerName(name);
             int CustomerID = foundCust.ID;
             //foundCust.Orders = _bl.GetOrder
-            if (foundCust.ID != 0)
+            if (foundCust.ID  > 0)
             {
                 return Ok(foundCust);
             }

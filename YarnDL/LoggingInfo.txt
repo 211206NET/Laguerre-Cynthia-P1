@@ -562,3 +562,1174 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
 2022-01-24 19:45:07.870 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 1710.3339ms
 2022-01-24 19:45:07.872 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
 2022-01-24 19:45:07.872 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/1 - - - 200 - application/json;+charset=utf-8 1788.1727ms
+2022-01-24 20:38:11.795 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 20:38:11.801 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 20:38:11.803 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 20:38:11.803 -05:00 [INF] Hosting environment: Development
+2022-01-24 20:38:11.803 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 20:41:23.836 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 20:41:24.043 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 212.3596ms
+2022-01-24 20:41:24.236 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 20:41:24.353 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 116.3596ms
+2022-01-24 20:41:38.366 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 20:41:38.375 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 20:41:38.394 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 20:41:39.928 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 20:41:39.941 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 1542.8239ms
+2022-01-24 20:41:39.942 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 20:41:39.942 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 200 - application/json;+charset=utf-8 1575.7496ms
+2022-01-24 20:42:05.283 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront - -
+2022-01-24 20:42:05.284 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 20:42:05.293 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature System.Collections.Generic.List`1[Models.StoreFront] Get() on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 20:42:05.618 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.StoreFront, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 20:42:05.622 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 328.139ms
+2022-01-24 20:42:05.622 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 20:42:05.622 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront - - - 200 - application/json;+charset=utf-8 339.2297ms
+2022-01-24 20:47:52.553 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 20:47:52.554 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 1.3681ms
+2022-01-24 20:47:52.773 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 20:47:52.784 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.6993ms
+2022-01-24 20:47:56.254 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer - -
+2022-01-24 20:47:56.254 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 20:47:56.255 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Customer] Get() on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 20:47:56.341 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 86.2009ms
+2022-01-24 20:47:56.343 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 20:47:56.348 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Customer'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   at DL.DBRepo.GetAllCustomers() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnDL\DBRepo.cs:line 34
+   at BL.CYFBL.GetAllCustomers() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnBL\CYFBL.cs:line 19
+   at WebAPI.Controllers.CustomerController.Get() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\Controllers\CustomerController.cs:line 32
+   at lambda_method6(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:3bd66aff-f1ea-42ef-b5ad-8f04022e8783
+Error Number:208,State:1,Class:16
+2022-01-24 20:47:56.403 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer - - - 500 - text/plain;+charset=utf-8 148.5822ms
+2022-01-24 20:48:06.739 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Inventory - -
+2022-01-24 20:48:06.740 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 20:48:06.741 -05:00 [INF] Route matched with {action = "Get", controller = "Inventory"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Inventory] Get() on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 20:48:06.958 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Get (WebAPI) in 216.3935ms
+2022-01-24 20:48:06.958 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 20:48:06.959 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Inventory'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   at DL.DBRepo.GetAllInventories() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnDL\DBRepo.cs:line 183
+   at BL.CYFBL.GetAllInventories() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnBL\CYFBL.cs:line 87
+   at WebAPI.Controllers.InventoryController.Get() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\Controllers\InventoryController.cs:line 23
+   at lambda_method8(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:3bd66aff-f1ea-42ef-b5ad-8f04022e8783
+Error Number:208,State:1,Class:16
+2022-01-24 20:48:06.963 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Inventory - - - 500 - text/plain;+charset=utf-8 223.3979ms
+2022-01-24 20:48:12.570 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/LineItem - -
+2022-01-24 20:48:12.570 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Get (WebAPI)'
+2022-01-24 20:48:12.571 -05:00 [INF] Route matched with {action = "Get", controller = "LineItem"}. Executing controller action with signature System.Collections.Generic.List`1[Models.LineItem] Get() on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 20:48:12.609 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Get (WebAPI) in 38.0657ms
+2022-01-24 20:48:12.610 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Get (WebAPI)'
+2022-01-24 20:48:12.610 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'LineItem'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   at DL.DBRepo.GetAllLineItems() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnDL\DBRepo.cs:line 326
+   at BL.CYFBL.GetAllLineItems() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnBL\CYFBL.cs:line 58
+   at WebAPI.Controllers.LineItemController.Get() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\Controllers\LineItemController.cs:line 24
+   at lambda_method10(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:3bd66aff-f1ea-42ef-b5ad-8f04022e8783
+Error Number:208,State:1,Class:16
+2022-01-24 20:48:12.612 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/LineItem - - - 500 - text/plain;+charset=utf-8 42.1277ms
+2022-01-24 20:48:18.515 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Orders - -
+2022-01-24 20:48:18.515 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.OrdersController.Get (WebAPI)'
+2022-01-24 20:48:18.516 -05:00 [INF] Route matched with {action = "Get", controller = "Orders"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Order] Get() on controller WebAPI.Controllers.OrdersController (WebAPI).
+2022-01-24 20:48:18.733 -05:00 [INF] Executed action WebAPI.Controllers.OrdersController.Get (WebAPI) in 216.0555ms
+2022-01-24 20:48:18.733 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.OrdersController.Get (WebAPI)'
+2022-01-24 20:48:18.733 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Orders'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   at DL.DBRepo.GetAllOrders() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnDL\DBRepo.cs:line 240
+   at BL.CYFBL.GetAllOrders() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnBL\CYFBL.cs:line 40
+   at WebAPI.Controllers.OrdersController.Get() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\Controllers\OrdersController.cs:line 25
+   at lambda_method12(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:3bd66aff-f1ea-42ef-b5ad-8f04022e8783
+Error Number:208,State:1,Class:16
+2022-01-24 20:48:18.735 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Orders - - - 500 - text/plain;+charset=utf-8 220.3847ms
+2022-01-24 20:48:25.748 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront - -
+2022-01-24 20:48:25.748 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 20:48:25.748 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature System.Collections.Generic.List`1[Models.StoreFront] Get() on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 20:48:25.941 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 192.4034ms
+2022-01-24 20:48:25.941 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 20:48:25.942 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Inventory'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   at DL.DBRepo.GetAllStoreFronts() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnDL\DBRepo.cs:line 110
+   at BL.CYFBL.GetAllStoreFronts() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnBL\CYFBL.cs:line 69
+   at WebAPI.Controllers.StoreFrontController.Get() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\Controllers\StoreFrontController.cs:line 31
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:3bd66aff-f1ea-42ef-b5ad-8f04022e8783
+Error Number:208,State:1,Class:16
+2022-01-24 20:48:25.946 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront - - - 500 - text/plain;+charset=utf-8 197.7090ms
+2022-01-24 20:48:45.948 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 20:48:45.949 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 0.9381ms
+2022-01-24 20:48:46.159 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 20:48:46.167 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.5170ms
+2022-01-24 20:48:57.248 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront - -
+2022-01-24 20:48:57.248 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 20:48:57.249 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature System.Collections.Generic.List`1[Models.StoreFront] Get() on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 20:48:57.323 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 74.1039ms
+2022-01-24 20:48:57.323 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 20:48:57.323 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Inventory'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   at DL.DBRepo.GetAllStoreFronts() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnDL\DBRepo.cs:line 110
+   at BL.CYFBL.GetAllStoreFronts() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnBL\CYFBL.cs:line 69
+   at WebAPI.Controllers.StoreFrontController.Get() in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\Controllers\StoreFrontController.cs:line 31
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:3bd66aff-f1ea-42ef-b5ad-8f04022e8783
+Error Number:208,State:1,Class:16
+2022-01-24 20:48:57.325 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront - - - 500 - text/plain;+charset=utf-8 77.0527ms
+2022-01-24 21:02:56.534 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 21:02:56.535 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 1.1481ms
+2022-01-24 21:02:56.758 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 21:02:56.767 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.7094ms
+2022-01-24 21:03:17.457 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 21:03:17.457 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 0.8164ms
+2022-01-24 21:03:17.654 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 21:03:17.661 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 6.9150ms
+2022-01-24 21:15:41.757 -05:00 [INF] Application is shutting down...
+2022-01-24 21:40:05.818 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 21:40:05.830 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 21:40:05.834 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 21:40:05.835 -05:00 [INF] Hosting environment: Development
+2022-01-24 21:40:05.835 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 21:40:07.331 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 21:40:07.785 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 21:40:07.786 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 457.2469ms
+2022-01-24 21:40:07.802 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 17.2123ms
+2022-01-24 21:40:07.967 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 21:40:08.156 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 188.9498ms
+2022-01-24 21:40:51.554 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 181
+2022-01-24 21:40:51.578 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:40:51.597 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:41:31.416 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 39815.1581ms
+2022-01-24 21:41:31.418 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:41:31.421 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Inventory'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DL.DBRepo.AddInventory(Int32 storeFrontID, Inventory inventoryToAdd) in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnDL\DBRepo.cs:line 218
+   at BL.CYFBL.AddInventory(Int32 storeFrontID, Inventory inventoryToAdd) in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\YarnBL\CYFBL.cs:line 96
+   at WebAPI.Controllers.InventoryController.Post(Int32 storeFrontID, Inventory inventoryToAdd) in C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\Controllers\InventoryController.cs:line 42
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:d6952824-fa5f-4fee-97e3-358c02199821
+Error Number:208,State:1,Class:16
+2022-01-24 21:41:31.479 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 181 - 500 - text/plain;+charset=utf-8 39925.1325ms
+2022-01-24 21:41:34.631 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 181
+2022-01-24 21:41:34.632 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:41:34.633 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:41:34.759 -05:00 [INF] An inventory item with store Id 1 and product name Wool Yarn of amount 40 was added.
+2022-01-24 21:41:34.761 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 127.895ms
+2022-01-24 21:41:34.761 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:41:34.762 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 181 - 200 0 - 130.4208ms
+2022-01-24 21:42:46.924 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 181
+2022-01-24 21:42:46.925 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:42:46.925 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:42:47.020 -05:00 [INF] An inventory item with store Id 1 and product name Wool Yarn of amount 40 was added.
+2022-01-24 21:42:47.021 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 95.2599ms
+2022-01-24 21:42:47.021 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:42:47.021 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 181 - 200 0 - 98.2984ms
+2022-01-24 21:43:25.076 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 202
+2022-01-24 21:43:25.080 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:43:25.084 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:43:25.198 -05:00 [INF] An inventory item with store Id 1 and product name Chunky Yarn of amount 40 was added.
+2022-01-24 21:43:25.199 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 111.8873ms
+2022-01-24 21:43:25.199 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:43:25.199 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 202 - 200 0 - 124.6377ms
+2022-01-24 21:44:17.550 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 197
+2022-01-24 21:44:17.560 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:44:17.560 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:44:17.714 -05:00 [INF] An inventory item with store Id 1 and product name Cotton Yarn of amount 40 was added.
+2022-01-24 21:44:17.714 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 154.4185ms
+2022-01-24 21:44:17.715 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:44:17.715 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 197 - 200 0 - 165.4182ms
+2022-01-24 21:44:29.186 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 197
+2022-01-24 21:44:29.186 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:44:29.186 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:44:29.245 -05:00 [INF] An inventory item with store Id 1 and product name Cotton Yarn of amount 40 was added.
+2022-01-24 21:44:29.245 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 58.8638ms
+2022-01-24 21:44:29.245 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:44:29.246 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 197 - 200 0 - 59.7343ms
+2022-01-24 21:46:23.050 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 181
+2022-01-24 21:46:23.056 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:46:23.058 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:46:23.196 -05:00 [INF] An inventory item with store Id 1 and product name Wool Yarn of amount 40 was added.
+2022-01-24 21:46:23.196 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 137.6598ms
+2022-01-24 21:46:23.196 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:46:23.196 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 181 - 200 0 - 146.3667ms
+2022-01-24 21:46:47.272 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 183
+2022-01-24 21:46:47.272 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:46:47.273 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:46:47.550 -05:00 [INF] An inventory item with store Id 1 and product name Cotton Yarn of amount 40 was added.
+2022-01-24 21:46:47.550 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 274.3665ms
+2022-01-24 21:46:47.551 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:46:47.551 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 183 - 200 0 - 279.5503ms
+2022-01-24 21:47:02.980 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 185
+2022-01-24 21:47:02.981 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:47:02.981 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:47:03.024 -05:00 [INF] An inventory item with store Id 2 and product name Cotton Yarn of amount 40 was added.
+2022-01-24 21:47:03.024 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 42.729ms
+2022-01-24 21:47:03.024 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:47:03.024 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 185 - 200 0 - 44.4787ms
+2022-01-24 21:48:12.103 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 183
+2022-01-24 21:48:12.108 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:48:12.108 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:48:12.165 -05:00 [INF] An inventory item with store Id 1 and product name Wool Yarn of amount 40 was added.
+2022-01-24 21:48:12.166 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 57.0322ms
+2022-01-24 21:48:12.166 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:48:12.166 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 183 - 200 0 - 63.4076ms
+2022-01-24 21:50:02.637 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 195
+2022-01-24 21:50:02.640 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:50:02.640 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:50:02.890 -05:00 [INF] An inventory item with store Id 1 and product name Cotton Yarn of amount 40 was added.
+2022-01-24 21:50:02.891 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 250.7023ms
+2022-01-24 21:50:02.891 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:50:02.892 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 195 - 200 0 - 254.1205ms
+2022-01-24 21:51:13.389 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 202
+2022-01-24 21:51:13.389 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:51:13.389 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 21:51:13.469 -05:00 [INF] An inventory item with store Id 1 and product name Chunky Yarn of amount 40 was added.
+2022-01-24 21:51:13.469 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 79.6914ms
+2022-01-24 21:51:13.469 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 21:51:13.469 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/1 application/json 202 - 200 0 - 80.8499ms
+2022-01-24 21:51:28.404 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/1 - -
+2022-01-24 21:51:28.404 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 21:51:28.406 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 21:51:28.685 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 21:51:28.695 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 288.4432ms
+2022-01-24 21:51:28.695 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 21:51:28.695 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/1 - - - 200 - application/json;+charset=utf-8 291.2417ms
+2022-01-24 21:52:07.029 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Customer application/json 92
+2022-01-24 21:52:07.030 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 21:52:07.033 -05:00 [INF] Route matched with {action = "Post", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.Customer) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 21:52:07.375 -05:00 [INF] A customer with and name Cynthia and email clag@yahoo.com was added
+2022-01-24 21:52:07.378 -05:00 [INF] Executing CreatedResult, writing value of type 'Models.Customer'.
+2022-01-24 21:52:07.381 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Post (WebAPI) in 347.5541ms
+2022-01-24 21:52:07.381 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 21:52:07.381 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Customer application/json 92 - 201 - application/json;+charset=utf-8 352.1301ms
+2022-01-24 21:52:55.241 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Customer application/json 92
+2022-01-24 21:52:55.242 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 21:52:55.242 -05:00 [INF] Route matched with {action = "Post", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.Customer) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 21:52:55.427 -05:00 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2022-01-24 21:52:55.427 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Post (WebAPI) in 184.547ms
+2022-01-24 21:52:55.427 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 21:52:55.427 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Customer application/json 92 - 409 - text/plain;+charset=utf-8 186.4746ms
+2022-01-24 21:53:45.724 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Customer application/json 90
+2022-01-24 21:53:45.725 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 21:53:45.725 -05:00 [INF] Route matched with {action = "Post", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.Customer) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 21:53:45.961 -05:00 [INF] A customer with and name Marie and email maria@gmail.com was added
+2022-01-24 21:53:45.961 -05:00 [INF] Executing CreatedResult, writing value of type 'Models.Customer'.
+2022-01-24 21:53:45.961 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Post (WebAPI) in 235.5744ms
+2022-01-24 21:53:45.961 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 21:53:45.961 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Customer application/json 90 - 201 - application/json;+charset=utf-8 237.2890ms
+2022-01-24 21:55:33.709 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Login claguerre@yahoo.com and passtheword?name=Cynthia - -
+2022-01-24 21:55:33.710 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 21:55:33.712 -05:00 [INF] Route matched with {action = "Login", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Login(System.String, System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 21:55:34.182 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2022-01-24 21:55:34.183 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Login (WebAPI) in 470.5577ms
+2022-01-24 21:55:34.183 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 21:55:34.183 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Login claguerre@yahoo.com and passtheword?name=Cynthia - - - 400 - text/plain;+charset=utf-8 474.9916ms
+2022-01-24 21:55:45.229 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Login clag@yahoo.com and passtheword?name=Cynthia - -
+2022-01-24 21:55:45.229 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 21:55:45.229 -05:00 [INF] Route matched with {action = "Login", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Login(System.String, System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 21:55:45.278 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-01-24 21:55:45.278 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Login (WebAPI) in 49.0072ms
+2022-01-24 21:55:45.278 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 21:55:45.279 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Login clag@yahoo.com and passtheword?name=Cynthia - - - 200 - text/plain;+charset=utf-8 49.7863ms
+2022-01-24 22:02:53.513 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer - -
+2022-01-24 22:02:53.515 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 22:02:53.540 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Customer] Get() on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:02:53.949 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Customer, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:02:53.950 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 409.8512ms
+2022-01-24 22:02:53.950 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 22:02:53.950 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer - - - 200 - application/json;+charset=utf-8 436.5216ms
+2022-01-24 22:03:18.026 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 22:03:18.027 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 22:03:18.034 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:03:18.897 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 22:03:18.898 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 863.9258ms
+2022-01-24 22:03:18.898 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 22:03:18.898 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 200 - application/json;+charset=utf-8 872.0188ms
+2022-01-24 22:03:47.052 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Inventory/1 - -
+2022-01-24 22:03:47.056 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 22:03:47.064 -05:00 [INF] Route matched with {action = "Get", controller = "Inventory"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Inventory] Get(Int32) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 22:03:47.290 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Inventory, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:03:47.290 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Get (WebAPI) in 226.5345ms
+2022-01-24 22:03:47.291 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 22:03:47.291 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Inventory/1 - - - 200 - application/json;+charset=utf-8 238.9926ms
+2022-01-24 22:04:06.063 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Inventory/2 - -
+2022-01-24 22:04:06.064 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 22:04:06.064 -05:00 [INF] Route matched with {action = "Get", controller = "Inventory"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Inventory] Get(Int32) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 22:04:06.119 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Inventory, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:04:06.119 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Get (WebAPI) in 55.5191ms
+2022-01-24 22:04:06.119 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 22:04:06.119 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Inventory/2 - - - 200 - application/json;+charset=utf-8 56.0807ms
+2022-01-24 22:04:31.292 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 202
+2022-01-24 22:04:31.292 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 22:04:31.294 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 22:04:31.359 -05:00 [INF] An inventory item with store Id 2 and product name Chunky Yarn of amount 40 was added.
+2022-01-24 22:04:31.360 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 63.3267ms
+2022-01-24 22:04:31.360 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 22:04:31.360 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 202 - 200 0 - 67.9116ms
+2022-01-24 22:05:22.893 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 182
+2022-01-24 22:05:22.894 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 22:05:22.894 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 22:05:23.018 -05:00 [INF] An inventory item with store Id 2 and product name Wool Yarn of amount 40 was added.
+2022-01-24 22:05:23.018 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 122.8472ms
+2022-01-24 22:05:23.018 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 22:05:23.018 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 182 - 200 0 - 126.1665ms
+2022-01-24 22:05:58.697 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 179
+2022-01-24 22:05:58.698 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 22:05:58.698 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 22:05:58.988 -05:00 [INF] An inventory item with store Id 2 and product name Cotton Yarn of amount 40 was added.
+2022-01-24 22:05:58.988 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 290.1504ms
+2022-01-24 22:05:58.988 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 22:05:58.988 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/2 application/json 179 - 200 0 - 291.2826ms
+2022-01-24 22:06:13.508 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/3 application/json 179
+2022-01-24 22:06:13.508 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 22:06:13.509 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 22:06:13.561 -05:00 [INF] An inventory item with store Id 3 and product name Cotton Yarn of amount 40 was added.
+2022-01-24 22:06:13.562 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 52.9207ms
+2022-01-24 22:06:13.562 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-24 22:06:13.562 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/3 application/json 179 - 200 0 - 53.3472ms
+2022-01-24 22:06:23.957 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Inventory - -
+2022-01-24 22:06:23.957 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 22:06:23.958 -05:00 [INF] Route matched with {action = "Get", controller = "Inventory"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Inventory] Get() on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 22:06:24.002 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Inventory, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:06:24.002 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Get (WebAPI) in 43.9067ms
+2022-01-24 22:06:24.002 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 22:06:24.002 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Inventory - - - 200 - application/json;+charset=utf-8 45.0795ms
+2022-01-24 22:07:01.363 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/1 - -
+2022-01-24 22:07:01.363 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:07:01.364 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 22:07:01.575 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 22:07:01.576 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 208.6156ms
+2022-01-24 22:07:01.576 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:07:01.576 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/1 - - - 200 - application/json;+charset=utf-8 213.5690ms
+2022-01-24 22:07:08.871 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/2 - -
+2022-01-24 22:07:08.871 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:07:08.871 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 22:07:09.367 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 22:07:09.367 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 495.727ms
+2022-01-24 22:07:09.367 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:07:09.367 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/2 - - - 200 - application/json;+charset=utf-8 496.2825ms
+2022-01-24 22:07:17.333 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/3 - -
+2022-01-24 22:07:17.333 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:07:17.333 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 22:07:17.776 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 22:07:17.776 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 443.0368ms
+2022-01-24 22:07:17.776 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:07:17.776 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/3 - - - 200 - application/json;+charset=utf-8 443.5793ms
+2022-01-24 22:10:06.374 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 1?inventoryID=1&quantity=5 application/json 182
+2022-01-24 22:10:06.375 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:10:06.388 -05:00 [INF] Route matched with {action = "Post", controller = "LineItem"}. Executing controller action with signature Void Post(Int32, Int32, Int32, Models.LineItem) on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 22:10:07.233 -05:00 [INF] An lineitem with product id 1 and quantity 5 was add to Cart.
+2022-01-24 22:10:07.502 -05:00 [INF] The item with Inventory ID 1 was increase to Quantity 35
+2022-01-24 22:10:07.503 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Post (WebAPI) in 1115.0631ms
+2022-01-24 22:10:07.503 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:10:07.503 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 1?inventoryID=1&quantity=5 application/json 182 - 200 0 - 1128.9600ms
+2022-01-24 22:10:25.407 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 1?inventoryID=2&quantity=5 application/json 182
+2022-01-24 22:10:25.408 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:10:25.408 -05:00 [INF] Route matched with {action = "Post", controller = "LineItem"}. Executing controller action with signature Void Post(Int32, Int32, Int32, Models.LineItem) on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 22:10:25.899 -05:00 [INF] An lineitem with product id 2 and quantity 5 was add to Cart.
+2022-01-24 22:10:25.971 -05:00 [INF] The item with Inventory ID 2 was increase to Quantity 35
+2022-01-24 22:10:25.971 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Post (WebAPI) in 562.9755ms
+2022-01-24 22:10:25.971 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:10:25.971 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 1?inventoryID=2&quantity=5 application/json 182 - 200 0 - 563.7341ms
+2022-01-24 22:10:39.382 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/LineItem/Line Order by 1 - -
+2022-01-24 22:10:39.383 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Get (WebAPI)'
+2022-01-24 22:10:39.385 -05:00 [INF] Route matched with {action = "Get", controller = "LineItem"}. Executing controller action with signature System.Collections.Generic.List`1[Models.LineItem] Get(Int32) on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 22:10:39.440 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.LineItem, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:10:39.441 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Get (WebAPI) in 56.0773ms
+2022-01-24 22:10:39.441 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Get (WebAPI)'
+2022-01-24 22:10:39.441 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/LineItem/Line Order by 1 - - - 200 - application/json;+charset=utf-8 59.0947ms
+2022-01-24 22:12:22.486 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Orders?name=Cynthia&storeFrontID=1 application/json 589
+2022-01-24 22:12:22.489 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.OrdersController.Post (WebAPI)'
+2022-01-24 22:12:22.538 -05:00 [INF] Route matched with {action = "Post", controller = "Orders"}. Executing controller action with signature Void Post(System.String, Int32, Models.Order) on controller WebAPI.Controllers.OrdersController (WebAPI).
+2022-01-24 22:12:22.944 -05:00 [INF] An order item with id 0 store Id 1 and customer Id 1 of amount 33.75 was added.
+2022-01-24 22:12:22.944 -05:00 [INF] Executed action WebAPI.Controllers.OrdersController.Post (WebAPI) in 405.1996ms
+2022-01-24 22:12:22.944 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.OrdersController.Post (WebAPI)'
+2022-01-24 22:12:22.944 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Orders?name=Cynthia&storeFrontID=1 application/json 589 - 200 0 - 458.2882ms
+2022-01-24 22:12:30.020 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Orders - -
+2022-01-24 22:12:30.021 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.OrdersController.Get (WebAPI)'
+2022-01-24 22:12:30.022 -05:00 [INF] Route matched with {action = "Get", controller = "Orders"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Order] Get() on controller WebAPI.Controllers.OrdersController (WebAPI).
+2022-01-24 22:12:30.124 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:12:30.126 -05:00 [INF] Executed action WebAPI.Controllers.OrdersController.Get (WebAPI) in 104.3357ms
+2022-01-24 22:12:30.126 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.OrdersController.Get (WebAPI)'
+2022-01-24 22:12:30.127 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Orders - - - 200 - application/json;+charset=utf-8 106.4094ms
+2022-01-24 22:13:05.193 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 22:13:05.194 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 22:13:05.194 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:13:05.541 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 22:13:05.542 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 346.891ms
+2022-01-24 22:13:05.542 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 22:13:05.542 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 200 - application/json;+charset=utf-8 348.6948ms
+2022-01-24 22:13:28.632 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/1 - -
+2022-01-24 22:13:28.633 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:13:28.634 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 22:13:29.027 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 22:13:29.027 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 390.429ms
+2022-01-24 22:13:29.027 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:13:29.027 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/1 - - - 200 - application/json;+charset=utf-8 395.3293ms
+2022-01-24 22:22:35.481 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 22:22:35.491 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 22:22:35.494 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 22:22:35.495 -05:00 [INF] Hosting environment: Development
+2022-01-24 22:22:35.495 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 22:23:06.846 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 22:23:07.201 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 357.5834ms
+2022-01-24 22:23:07.201 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 22:23:07.219 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 17.3991ms
+2022-01-24 22:23:07.348 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 22:23:07.500 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 151.6464ms
+2022-01-24 22:24:32.529 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 2?inventoryID=4&quantity=4 application/json 182
+2022-01-24 22:24:32.572 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:24:32.591 -05:00 [INF] Route matched with {action = "Post", controller = "LineItem"}. Executing controller action with signature Void Post(Int32, Int32, Int32, Models.LineItem) on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 22:24:34.139 -05:00 [INF] An lineitem with product id 4 and quantity 4 was add to Cart.
+2022-01-24 22:24:34.467 -05:00 [INF] The item with Inventory ID 4 was increase to Quantity 36
+2022-01-24 22:24:34.473 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Post (WebAPI) in 1876.3696ms
+2022-01-24 22:24:34.474 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:24:34.474 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 2?inventoryID=4&quantity=4 application/json 182 - 200 0 - 1945.1089ms
+2022-01-24 22:25:04.490 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 2?inventoryID=5&quantity=4 application/json 182
+2022-01-24 22:25:04.509 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:25:04.510 -05:00 [INF] Route matched with {action = "Post", controller = "LineItem"}. Executing controller action with signature Void Post(Int32, Int32, Int32, Models.LineItem) on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 22:25:05.007 -05:00 [INF] An lineitem with product id 5 and quantity 4 was add to Cart.
+2022-01-24 22:25:05.248 -05:00 [INF] The item with Inventory ID 5 was increase to Quantity 36
+2022-01-24 22:25:05.248 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Post (WebAPI) in 737.8789ms
+2022-01-24 22:25:05.248 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:25:05.248 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 2?inventoryID=5&quantity=4 application/json 182 - 200 0 - 757.9144ms
+2022-01-24 22:25:13.885 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 2?inventoryID=6&quantity=4 application/json 182
+2022-01-24 22:25:13.885 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:25:13.885 -05:00 [INF] Route matched with {action = "Post", controller = "LineItem"}. Executing controller action with signature Void Post(Int32, Int32, Int32, Models.LineItem) on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 22:25:14.420 -05:00 [INF] An lineitem with product id 6 and quantity 4 was add to Cart.
+2022-01-24 22:25:14.493 -05:00 [INF] The item with Inventory ID 6 was increase to Quantity 36
+2022-01-24 22:25:14.494 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Post (WebAPI) in 608.722ms
+2022-01-24 22:25:14.494 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:25:14.495 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 2?inventoryID=6&quantity=4 application/json 182 - 200 0 - 609.9881ms
+2022-01-24 22:27:30.873 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Orders?name=Cynthia&storeFrontID=2 application/json 816
+2022-01-24 22:27:30.874 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.OrdersController.Post (WebAPI)'
+2022-01-24 22:27:30.883 -05:00 [INF] Route matched with {action = "Post", controller = "Orders"}. Executing controller action with signature Void Post(System.String, Int32, Models.Order) on controller WebAPI.Controllers.OrdersController (WebAPI).
+2022-01-24 22:27:31.131 -05:00 [INF] An order item with id 0 store Id 2 and customer Id 1 of amount 42.00 was added.
+2022-01-24 22:27:31.131 -05:00 [INF] Executed action WebAPI.Controllers.OrdersController.Post (WebAPI) in 247.1963ms
+2022-01-24 22:27:31.131 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.OrdersController.Post (WebAPI)'
+2022-01-24 22:27:31.131 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Orders?name=Cynthia&storeFrontID=2 application/json 816 - 200 0 - 257.7009ms
+2022-01-24 22:27:37.311 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Orders - -
+2022-01-24 22:27:37.311 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.OrdersController.Get (WebAPI)'
+2022-01-24 22:27:37.313 -05:00 [INF] Route matched with {action = "Get", controller = "Orders"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Order] Get() on controller WebAPI.Controllers.OrdersController (WebAPI).
+2022-01-24 22:27:37.411 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:27:37.416 -05:00 [INF] Executed action WebAPI.Controllers.OrdersController.Get (WebAPI) in 103.4603ms
+2022-01-24 22:27:37.416 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.OrdersController.Get (WebAPI)'
+2022-01-24 22:27:37.416 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Orders - - - 200 - application/json;+charset=utf-8 105.7354ms
+2022-01-24 22:29:33.413 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/2 - -
+2022-01-24 22:29:33.414 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:29:33.417 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 22:29:34.139 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 22:29:34.142 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 723.5792ms
+2022-01-24 22:29:34.142 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 22:29:34.142 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/2 - - - 200 - application/json;+charset=utf-8 729.1403ms
+2022-01-24 22:31:22.837 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 22:31:22.844 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 22:31:22.848 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 22:31:22.848 -05:00 [INF] Hosting environment: Development
+2022-01-24 22:31:22.848 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 22:31:24.670 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 22:31:25.063 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 397.3034ms
+2022-01-24 22:31:25.083 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 22:31:25.090 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 7.3098ms
+2022-01-24 22:31:25.258 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 22:31:25.445 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.9798ms
+2022-01-24 22:50:21.568 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 22:50:21.579 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 22:50:21.583 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 22:50:21.583 -05:00 [INF] Hosting environment: Development
+2022-01-24 22:50:21.584 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 22:50:23.441 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 22:50:23.989 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 22:50:23.990 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 542.4485ms
+2022-01-24 22:50:24.015 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 25.7329ms
+2022-01-24 22:50:24.200 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 22:50:24.409 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 209.2207ms
+2022-01-24 22:51:57.355 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 3?inventoryID=1&quantity=2 application/json 182
+2022-01-24 22:51:57.373 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:51:57.420 -05:00 [INF] Route matched with {action = "Post", controller = "LineItem"}. Executing controller action with signature Void Post(Int32, Int32, Int32, Models.LineItem) on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 22:51:59.913 -05:00 [INF] An lineitem with product id 1 and quantity 2 was add to Cart.
+2022-01-24 22:52:00.161 -05:00 [INF] The item with Inventory ID 1 was increase to Quantity 33
+2022-01-24 22:52:00.176 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Post (WebAPI) in 2742.3492ms
+2022-01-24 22:52:00.178 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 22:52:00.178 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 3?inventoryID=1&quantity=2 application/json 182 - 200 0 - 2826.6341ms
+2022-01-24 22:53:25.234 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Orders?name=Cynthia&storeFrontID=1 application/json 362
+2022-01-24 22:53:25.251 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.OrdersController.Post (WebAPI)'
+2022-01-24 22:53:25.254 -05:00 [INF] Route matched with {action = "Post", controller = "Orders"}. Executing controller action with signature Void Post(System.String, Int32, Models.Order) on controller WebAPI.Controllers.OrdersController (WebAPI).
+2022-01-24 22:53:25.799 -05:00 [INF] An order item with id 0 store Id 1 and customer Id 1 of amount 7.00 was added.
+2022-01-24 22:53:25.799 -05:00 [INF] Executed action WebAPI.Controllers.OrdersController.Post (WebAPI) in 544.845ms
+2022-01-24 22:53:25.799 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.OrdersController.Post (WebAPI)'
+2022-01-24 22:53:25.800 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Orders?name=Cynthia&storeFrontID=1 application/json 362 - 200 0 - 566.5950ms
+2022-01-24 22:53:52.900 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 22:53:52.916 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 22:53:52.936 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:53:53.136 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 22:53:53.149 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 212.3694ms
+2022-01-24 22:53:53.149 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 22:53:53.150 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 200 - application/json;+charset=utf-8 256.3422ms
+2022-01-24 22:54:21.302 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - -
+2022-01-24 22:54:21.310 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:54:21.318 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:54:21.502 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:54:21.503 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 185.0578ms
+2022-01-24 22:54:21.503 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:54:21.504 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - - - 200 - application/json;+charset=utf-8 201.7175ms
+2022-01-24 22:54:42.041 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=lower - -
+2022-01-24 22:54:42.050 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:54:42.054 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:54:42.215 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:54:42.216 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 161.4668ms
+2022-01-24 22:54:42.216 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:54:42.216 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=lower - - - 200 - application/json;+charset=utf-8 175.8576ms
+2022-01-24 22:54:54.821 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - -
+2022-01-24 22:54:54.822 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:54:54.823 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:54:55.077 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:54:55.078 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 247.3671ms
+2022-01-24 22:54:55.078 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:54:55.078 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - - - 200 - application/json;+charset=utf-8 257.9472ms
+2022-01-24 22:56:03.450 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=newer - -
+2022-01-24 22:56:03.456 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:56:03.460 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:56:03.680 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:56:03.681 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 215.618ms
+2022-01-24 22:56:03.681 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:56:03.683 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=newer - - - 200 - application/json;+charset=utf-8 237.9967ms
+2022-01-24 22:56:17.917 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=older - -
+2022-01-24 22:56:17.918 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:56:17.919 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:56:18.655 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:56:18.655 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 736.8021ms
+2022-01-24 22:56:18.656 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:56:18.656 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=older - - - 200 - application/json;+charset=utf-8 738.5184ms
+2022-01-24 22:56:28.041 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - -
+2022-01-24 22:56:28.042 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:56:28.042 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:56:28.316 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:56:28.317 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 274.8111ms
+2022-01-24 22:56:28.317 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:56:28.317 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - - - 200 - application/json;+charset=utf-8 275.8160ms
+2022-01-24 22:59:37.642 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 22:59:37.659 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 22:59:37.665 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 22:59:37.666 -05:00 [INF] Hosting environment: Development
+2022-01-24 22:59:37.666 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 22:59:39.862 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 22:59:40.417 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 560.4261ms
+2022-01-24 22:59:40.417 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 22:59:40.437 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 19.8853ms
+2022-01-24 22:59:40.626 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 22:59:40.866 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 239.5562ms
+2022-01-24 22:59:50.887 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - -
+2022-01-24 22:59:50.907 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:59:50.963 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 22:59:52.830 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 22:59:52.866 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 1891.5133ms
+2022-01-24 22:59:52.869 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 22:59:52.869 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - - - 200 - application/json;+charset=utf-8 1982.7847ms
+2022-01-24 23:00:11.432 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=lower - -
+2022-01-24 23:00:11.434 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:00:11.435 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:00:11.612 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 23:00:11.612 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 177.3455ms
+2022-01-24 23:00:11.613 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:00:11.613 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=lower - - - 200 - application/json;+charset=utf-8 181.5241ms
+2022-01-24 23:00:22.811 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=newer - -
+2022-01-24 23:00:22.811 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:00:22.811 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:00:23.127 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 23:00:23.128 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 316.9152ms
+2022-01-24 23:00:23.129 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:00:23.129 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=newer - - - 200 - application/json;+charset=utf-8 318.7536ms
+2022-01-24 23:00:33.405 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=older - -
+2022-01-24 23:00:33.406 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:00:33.406 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:00:33.583 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 23:00:33.584 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 177.2444ms
+2022-01-24 23:00:33.584 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:00:33.584 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=older - - - 200 - application/json;+charset=utf-8 178.5415ms
+2022-01-24 23:01:12.722 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Maria - -
+2022-01-24 23:01:12.723 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:01:12.726 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:01:12.993 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2022-01-24 23:01:12.993 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 267.0715ms
+2022-01-24 23:01:12.993 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:01:12.993 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Maria - - - 204 - - 271.9253ms
+2022-01-24 23:01:37.214 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 23:01:37.217 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:01:37.217 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:01:38.182 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 23:01:38.186 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 963.2165ms
+2022-01-24 23:01:38.186 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:01:38.186 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 200 - application/json;+charset=utf-8 971.9048ms
+2022-01-24 23:02:41.392 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 23:02:41.401 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 23:02:41.404 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 23:02:41.405 -05:00 [INF] Hosting environment: Development
+2022-01-24 23:02:41.405 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 23:02:43.121 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 23:02:43.652 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 23:02:43.654 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 536.5151ms
+2022-01-24 23:02:43.676 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 24.7601ms
+2022-01-24 23:02:43.878 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 23:02:44.045 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 166.5020ms
+2022-01-24 23:02:52.863 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Marie - -
+2022-01-24 23:02:52.885 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:02:52.940 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:02:54.422 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2022-01-24 23:02:54.432 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 1482.5452ms
+2022-01-24 23:02:54.433 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:02:54.433 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Marie - - - 204 - - 1570.9495ms
+2022-01-24 23:03:31.571 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Login clag@yahoo.com and passtheword?name=Cynthia - -
+2022-01-24 23:03:31.579 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 23:03:31.584 -05:00 [INF] Route matched with {action = "Login", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Login(System.String, System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:03:31.699 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-01-24 23:03:31.701 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Login (WebAPI) in 116.4325ms
+2022-01-24 23:03:31.701 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 23:03:31.701 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Login clag@yahoo.com and passtheword?name=Cynthia - - - 200 - text/plain;+charset=utf-8 130.5332ms
+2022-01-24 23:07:18.222 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 23:07:18.237 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:07:18.237 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:07:18.476 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2022-01-24 23:07:18.476 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 238.9629ms
+2022-01-24 23:07:18.476 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:07:18.477 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 204 - - 255.7735ms
+2022-01-24 23:08:27.083 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 23:08:27.096 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 23:08:27.102 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 23:08:27.103 -05:00 [INF] Hosting environment: Development
+2022-01-24 23:08:27.103 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 23:08:28.895 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 23:08:29.376 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 485.9249ms
+2022-01-24 23:08:29.377 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 23:08:29.396 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 19.0805ms
+2022-01-24 23:08:29.565 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 23:08:29.764 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 198.6111ms
+2022-01-24 23:08:35.920 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Marie - -
+2022-01-24 23:08:35.935 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:08:35.976 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:08:37.785 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 23:08:37.806 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 1818.9799ms
+2022-01-24 23:08:37.808 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:08:37.808 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Marie - - - 200 - application/json;+charset=utf-8 1888.0755ms
+2022-01-24 23:08:44.377 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 23:08:44.380 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:08:44.380 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:08:44.577 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 23:08:44.588 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 207.3552ms
+2022-01-24 23:08:44.588 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:08:44.589 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 200 - application/json;+charset=utf-8 211.3057ms
+2022-01-24 23:09:02.093 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=newer - -
+2022-01-24 23:09:02.094 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:09:02.096 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:09:02.540 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 23:09:02.541 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 444.1403ms
+2022-01-24 23:09:02.541 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:09:02.541 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=newer - - - 200 - application/json;+charset=utf-8 447.9723ms
+2022-01-24 23:10:30.228 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:7165/api/Inventory?inventoryID=1&addQuantity=40 application/json 8
+2022-01-24 23:10:30.231 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Put (WebAPI)'
+2022-01-24 23:10:30.245 -05:00 [INF] Route matched with {action = "Put", controller = "Inventory"}. Executing controller action with signature Void Put(Int32, Int32, System.String) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 23:10:30.586 -05:00 [INF] The item with Inventory ID 1 was increase to Quantity 40
+2022-01-24 23:10:30.588 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Put (WebAPI) in 342.698ms
+2022-01-24 23:10:30.588 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Put (WebAPI)'
+2022-01-24 23:10:30.588 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:7165/api/Inventory?inventoryID=1&addQuantity=40 application/json 8 - 200 0 - 360.8498ms
+2022-01-24 23:11:02.833 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Inventory/1 - -
+2022-01-24 23:11:02.835 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 23:11:02.860 -05:00 [INF] Route matched with {action = "Get", controller = "Inventory"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Inventory] Get(Int32) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 23:11:02.993 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Inventory, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 23:11:02.998 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Get (WebAPI) in 137.5877ms
+2022-01-24 23:11:02.998 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 23:11:02.999 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Inventory/1 - - - 200 - application/json;+charset=utf-8 167.0165ms
+2022-01-24 23:11:16.354 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Inventory/1 - -
+2022-01-24 23:11:16.355 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 23:11:16.355 -05:00 [INF] Route matched with {action = "Get", controller = "Inventory"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Inventory] Get(Int32) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 23:11:16.410 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Inventory, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 23:11:16.411 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Get (WebAPI) in 56.383ms
+2022-01-24 23:11:16.411 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 23:11:16.412 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Inventory/1 - - - 200 - application/json;+charset=utf-8 58.2094ms
+2022-01-24 23:11:22.594 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:7165/api/Inventory?inventoryID=1&addQuantity=20 application/json 8
+2022-01-24 23:11:22.594 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Put (WebAPI)'
+2022-01-24 23:11:22.594 -05:00 [INF] Route matched with {action = "Put", controller = "Inventory"}. Executing controller action with signature Void Put(Int32, Int32, System.String) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 23:11:22.652 -05:00 [INF] The item with Inventory ID 1 was increase to Quantity 20
+2022-01-24 23:11:22.652 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Put (WebAPI) in 57.9619ms
+2022-01-24 23:11:22.653 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Put (WebAPI)'
+2022-01-24 23:11:22.653 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:7165/api/Inventory?inventoryID=1&addQuantity=20 application/json 8 - 200 0 - 59.1041ms
+2022-01-24 23:11:26.728 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Inventory/1 - -
+2022-01-24 23:11:26.728 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 23:11:26.728 -05:00 [INF] Route matched with {action = "Get", controller = "Inventory"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Inventory] Get(Int32) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-24 23:11:26.775 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Inventory, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 23:11:26.776 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Get (WebAPI) in 47.7364ms
+2022-01-24 23:11:26.776 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-24 23:11:26.776 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Inventory/1 - - - 200 - application/json;+charset=utf-8 48.5064ms
+2022-01-24 23:11:43.053 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/1 - -
+2022-01-24 23:11:43.054 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 23:11:43.056 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 23:11:43.759 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-24 23:11:43.763 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 706.2133ms
+2022-01-24 23:11:43.763 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-24 23:11:43.763 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/1 - - - 200 - application/json;+charset=utf-8 710.1653ms
+2022-01-24 23:12:04.874 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 1?sort=higher - -
+2022-01-24 23:12:04.874 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:12:04.891 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(Int32, System.String) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-24 23:12:05.175 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 23:12:05.176 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI) in 284.3149ms
+2022-01-24 23:12:05.176 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-24 23:12:05.176 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 1?sort=higher - - - 200 - application/json;+charset=utf-8 302.7123ms
+2022-01-24 23:49:17.011 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 23:49:17.025 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 23:49:17.030 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 23:49:17.030 -05:00 [INF] Hosting environment: Development
+2022-01-24 23:49:17.030 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 23:49:19.002 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 23:49:19.614 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 23:49:19.614 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 616.6594ms
+2022-01-24 23:49:19.636 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 22.1049ms
+2022-01-24 23:49:19.898 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 23:49:20.149 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 250.4852ms
+2022-01-24 23:53:15.106 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 23:53:15.115 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 23:53:15.118 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 23:53:15.118 -05:00 [INF] Hosting environment: Development
+2022-01-24 23:53:15.119 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 23:53:16.312 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 23:53:16.664 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 358.1142ms
+2022-01-24 23:53:16.681 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 23:53:16.684 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 3.4182ms
+2022-01-24 23:53:17.057 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 23:53:17.195 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.2162ms
+2022-01-24 23:53:50.484 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-24 23:53:50.495 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-24 23:53:50.499 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-24 23:53:50.499 -05:00 [INF] Hosting environment: Development
+2022-01-24 23:53:50.499 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-24 23:53:52.273 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-24 23:53:53.024 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 753.0724ms
+2022-01-24 23:53:53.024 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-24 23:53:53.046 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 22.5593ms
+2022-01-24 23:53:53.441 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-24 23:53:53.680 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 238.9116ms
+2022-01-24 23:54:43.963 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Customer application/json 92
+2022-01-24 23:54:43.984 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 23:54:44.035 -05:00 [INF] Route matched with {action = "Post", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.Customer) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:54:45.529 -05:00 [INF] A customer with and name utz and email honeywheat@outlook.com was added
+2022-01-24 23:54:45.541 -05:00 [INF] Executing CreatedResult, writing value of type 'Models.Customer'.
+2022-01-24 23:54:45.556 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Post (WebAPI) in 1511.5922ms
+2022-01-24 23:54:45.558 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Post (WebAPI)'
+2022-01-24 23:54:45.558 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Customer application/json 92 - 201 - application/json;+charset=utf-8 1594.6649ms
+2022-01-24 23:55:02.188 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer - -
+2022-01-24 23:55:02.191 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:55:02.195 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Customer] Get() on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:55:02.417 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Customer, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-24 23:55:02.436 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 240.278ms
+2022-01-24 23:55:02.436 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:55:02.436 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer - - - 200 - application/json;+charset=utf-8 248.3559ms
+2022-01-24 23:55:37.357 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Login honeywheat@outlook.com and pretzel?name=utz - -
+2022-01-24 23:55:37.358 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 23:55:37.363 -05:00 [INF] Route matched with {action = "Login", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Login(System.String, System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:55:37.673 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-01-24 23:55:37.674 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Login (WebAPI) in 310.6616ms
+2022-01-24 23:55:37.674 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Login (WebAPI)'
+2022-01-24 23:55:37.675 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Login honeywheat@outlook.com and pretzel?name=utz - - - 200 - text/plain;+charset=utf-8 317.8944ms
+2022-01-24 23:55:55.838 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/utz - -
+2022-01-24 23:55:55.839 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:55:55.841 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:55:56.013 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 23:55:56.014 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 172.0881ms
+2022-01-24 23:55:56.014 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:55:56.014 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/utz - - - 200 - application/json;+charset=utf-8 176.5679ms
+2022-01-24 23:56:06.455 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - -
+2022-01-24 23:56:06.456 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:56:06.456 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-24 23:56:06.618 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-24 23:56:06.619 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 162.2996ms
+2022-01-24 23:56:06.619 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-24 23:56:06.619 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Cynthia - - - 200 - application/json;+charset=utf-8 164.3765ms
+2022-01-24 23:57:49.903 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 4?inventoryID=4&quantity=10 application/json 183
+2022-01-24 23:57:49.904 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 23:57:49.941 -05:00 [INF] Route matched with {action = "Post", controller = "LineItem"}. Executing controller action with signature Void Post(Int32, Int32, Int32, Models.LineItem) on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 23:57:51.128 -05:00 [INF] An lineitem with product id 4 and quantity 10 was add to Cart.
+2022-01-24 23:57:51.210 -05:00 [INF] The item with Inventory ID 4 was increase to Quantity 26
+2022-01-24 23:57:51.211 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Post (WebAPI) in 1269.2235ms
+2022-01-24 23:57:51.211 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 23:57:51.211 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 4?inventoryID=4&quantity=10 application/json 183 - 200 0 - 1309.1368ms
+2022-01-24 23:58:18.272 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 4?inventoryID=5&quantity=5 application/json 182
+2022-01-24 23:58:18.272 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 23:58:18.274 -05:00 [INF] Route matched with {action = "Post", controller = "LineItem"}. Executing controller action with signature Void Post(Int32, Int32, Int32, Models.LineItem) on controller WebAPI.Controllers.LineItemController (WebAPI).
+2022-01-24 23:58:18.696 -05:00 [INF] An lineitem with product id 5 and quantity 5 was add to Cart.
+2022-01-24 23:58:18.769 -05:00 [INF] The item with Inventory ID 5 was increase to Quantity 31
+2022-01-24 23:58:18.769 -05:00 [INF] Executed action WebAPI.Controllers.LineItemController.Post (WebAPI) in 489.5792ms
+2022-01-24 23:58:18.769 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.LineItemController.Post (WebAPI)'
+2022-01-24 23:58:18.770 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/LineItem/Create LineItem by 4?inventoryID=5&quantity=5 application/json 182 - 200 0 - 498.0150ms
+2022-01-25 00:00:06.758 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Orders?name=Marie&storeFrontID=2 application/json 590
+2022-01-25 00:00:06.760 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.OrdersController.Post (WebAPI)'
+2022-01-25 00:00:06.764 -05:00 [INF] Route matched with {action = "Post", controller = "Orders"}. Executing controller action with signature Void Post(System.String, Int32, Models.Order) on controller WebAPI.Controllers.OrdersController (WebAPI).
+2022-01-25 00:00:07.083 -05:00 [INF] An order item with id 0 store Id 2 and customer Id 2 of amount 55.00 was added.
+2022-01-25 00:00:07.085 -05:00 [INF] Executed action WebAPI.Controllers.OrdersController.Post (WebAPI) in 321.1556ms
+2022-01-25 00:00:07.086 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.OrdersController.Post (WebAPI)'
+2022-01-25 00:00:07.087 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Orders?name=Marie&storeFrontID=2 application/json 590 - 200 0 - 331.3475ms
+2022-01-25 00:00:29.024 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/Marie - -
+2022-01-25 00:00:29.028 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-25 00:00:29.028 -05:00 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Customer] Get(System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-25 00:00:29.459 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.Customer'.
+2022-01-25 00:00:29.460 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.Get (WebAPI) in 429.0589ms
+2022-01-25 00:00:29.460 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.Get (WebAPI)'
+2022-01-25 00:00:29.460 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/Marie - - - 200 - application/json;+charset=utf-8 436.2410ms
+2022-01-25 00:00:56.042 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=older - -
+2022-01-25 00:00:56.046 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:00:56.075 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-25 00:00:56.263 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:00:56.264 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 188.9544ms
+2022-01-25 00:00:56.264 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:00:56.264 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=older - - - 200 - application/json;+charset=utf-8 221.7598ms
+2022-01-25 00:02:35.962 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/StoreFront application/json 112
+2022-01-25 00:02:35.966 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Post (WebAPI)'
+2022-01-25 00:02:35.991 -05:00 [INF] Route matched with {action = "Post", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.StoreFront) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-25 00:02:36.014 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-25 00:02:36.018 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Post (WebAPI) in 26.9153ms
+2022-01-25 00:02:36.019 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Post (WebAPI)'
+2022-01-25 00:02:36.019 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/StoreFront application/json 112 - 400 - application/problem+json;+charset=utf-8 57.2779ms
+2022-01-25 00:02:52.886 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/StoreFront application/json 111
+2022-01-25 00:02:52.887 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Post (WebAPI)'
+2022-01-25 00:02:52.887 -05:00 [INF] Route matched with {action = "Post", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Post(Models.StoreFront) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-25 00:02:52.959 -05:00 [INF]  Store name Waterbury's CYF was added.
+2022-01-25 00:02:52.960 -05:00 [INF] Executing CreatedResult, writing value of type 'Models.StoreFront'.
+2022-01-25 00:02:52.963 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Post (WebAPI) in 75.3708ms
+2022-01-25 00:02:52.963 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Post (WebAPI)'
+2022-01-25 00:02:52.963 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/StoreFront application/json 111 - 201 - application/json;+charset=utf-8 77.0517ms
+2022-01-25 00:03:45.908 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7165/api/Inventory/4 application/json 180
+2022-01-25 00:03:45.913 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-25 00:03:45.938 -05:00 [INF] Route matched with {action = "Post", controller = "Inventory"}. Executing controller action with signature Void Post(Int32, Models.Inventory) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-25 00:03:46.034 -05:00 [INF] An inventory item with store Id 4 and product name Wool Yarn of amount 50 was added.
+2022-01-25 00:03:46.035 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Post (WebAPI) in 95.8601ms
+2022-01-25 00:03:46.035 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Post (WebAPI)'
+2022-01-25 00:03:46.035 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7165/api/Inventory/4 application/json 180 - 200 0 - 127.2173ms
+2022-01-25 00:03:55.575 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Inventory/4 - -
+2022-01-25 00:03:55.576 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-25 00:03:55.579 -05:00 [INF] Route matched with {action = "Get", controller = "Inventory"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Inventory] Get(Int32) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-25 00:03:55.635 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Inventory, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:03:55.638 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Get (WebAPI) in 58.5404ms
+2022-01-25 00:03:55.638 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Get (WebAPI)'
+2022-01-25 00:03:55.638 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Inventory/4 - - - 200 - application/json;+charset=utf-8 63.0691ms
+2022-01-25 00:04:11.362 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/1 - -
+2022-01-25 00:04:11.363 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-25 00:04:11.376 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-25 00:04:11.557 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-25 00:04:11.557 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 181.0898ms
+2022-01-25 00:04:11.557 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-25 00:04:11.558 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/1 - - - 200 - application/json;+charset=utf-8 196.0728ms
+2022-01-25 00:04:49.585 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:7165/api/Inventory?inventoryID=1&addQuantity=30 application/json 8
+2022-01-25 00:04:49.585 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.InventoryController.Put (WebAPI)'
+2022-01-25 00:04:49.608 -05:00 [INF] Route matched with {action = "Put", controller = "Inventory"}. Executing controller action with signature Void Put(Int32, Int32, System.String) on controller WebAPI.Controllers.InventoryController (WebAPI).
+2022-01-25 00:04:49.942 -05:00 [INF] The item with Inventory ID 1 was increase to Quantity 30
+2022-01-25 00:04:49.942 -05:00 [INF] Executed action WebAPI.Controllers.InventoryController.Put (WebAPI) in 333.4109ms
+2022-01-25 00:04:49.942 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.InventoryController.Put (WebAPI)'
+2022-01-25 00:04:49.942 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:7165/api/Inventory?inventoryID=1&addQuantity=30 application/json 8 - 200 0 - 357.7709ms
+2022-01-25 00:05:00.230 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/1 - -
+2022-01-25 00:05:00.231 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-25 00:05:00.231 -05:00 [INF] Route matched with {action = "Get", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.StoreFront] Get(Int32) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-25 00:05:00.392 -05:00 [INF] Executing OkObjectResult, writing value of type 'Models.StoreFront'.
+2022-01-25 00:05:00.392 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.Get (WebAPI) in 161.4288ms
+2022-01-25 00:05:00.393 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.Get (WebAPI)'
+2022-01-25 00:05:00.393 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/1 - - - 200 - application/json;+charset=utf-8 162.9430ms
+2022-01-25 00:05:16.376 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 1?sort=higher - -
+2022-01-25 00:05:16.377 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:05:16.379 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(Int32, System.String) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-25 00:05:16.827 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:05:16.828 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI) in 448.3484ms
+2022-01-25 00:05:16.828 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:05:16.828 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 1?sort=higher - - - 200 - application/json;+charset=utf-8 451.9648ms
+2022-01-25 00:05:35.913 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 2?sort=higher - -
+2022-01-25 00:05:35.914 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:05:35.914 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(Int32, System.String) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-25 00:05:36.185 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:05:36.185 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI) in 271.5075ms
+2022-01-25 00:05:36.185 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:05:36.186 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 2?sort=higher - - - 200 - application/json;+charset=utf-8 272.5255ms
+2022-01-25 00:05:50.899 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 2?sort=lower - -
+2022-01-25 00:05:50.899 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:05:50.900 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(Int32, System.String) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-25 00:05:51.220 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:05:51.220 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI) in 320.4115ms
+2022-01-25 00:05:51.220 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:05:51.220 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 2?sort=lower - - - 200 - application/json;+charset=utf-8 321.3997ms
+2022-01-25 00:06:09.520 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 2?sort=higher - -
+2022-01-25 00:06:09.521 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:06:09.521 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "StoreFront"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(Int32, System.String) on controller WebAPI.Controllers.StoreFrontController (WebAPI).
+2022-01-25 00:06:09.752 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:06:09.752 -05:00 [INF] Executed action WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI) in 231.3701ms
+2022-01-25 00:06:09.752 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.StoreFrontController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:06:09.753 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/StoreFront/orders sorted by 2?sort=higher - - - 200 - application/json;+charset=utf-8 232.2298ms
+2022-01-25 00:10:11.492 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-25 00:10:11.506 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-25 00:10:11.512 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-25 00:10:11.512 -05:00 [INF] Hosting environment: Development
+2022-01-25 00:10:11.512 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-25 00:10:12.646 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-25 00:10:13.218 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 578.5908ms
+2022-01-25 00:10:13.225 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-25 00:10:13.238 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 12.9533ms
+2022-01-25 00:10:13.471 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-25 00:10:13.710 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 239.2492ms
+2022-01-25 00:10:34.431 -05:00 [INF] Now listening on: https://localhost:7165
+2022-01-25 00:10:34.446 -05:00 [INF] Now listening on: http://localhost:5165
+2022-01-25 00:10:34.451 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-25 00:10:34.451 -05:00 [INF] Hosting environment: Development
+2022-01-25 00:10:34.452 -05:00 [INF] Content root path: C:\Users\cynth\Revature\Proj1\Laguerre-Cynthia-P1\WebAPI\
+2022-01-25 00:10:36.022 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/index.html - -
+2022-01-25 00:10:36.582 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - -
+2022-01-25 00:10:36.586 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/index.html - - - 200 - text/html;charset=utf-8 570.1092ms
+2022-01-25 00:10:36.588 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 5.7193ms
+2022-01-25 00:10:36.799 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - -
+2022-01-25 00:10:36.978 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 179.4241ms
+2022-01-25 00:10:49.130 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=newer - -
+2022-01-25 00:10:49.151 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:10:49.203 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-25 00:10:50.621 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:10:50.655 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 1442.5093ms
+2022-01-25 00:10:50.657 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:10:50.657 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=newer - - - 200 - application/json;+charset=utf-8 1527.9246ms
+2022-01-25 00:11:08.812 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=older - -
+2022-01-25 00:11:08.815 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:11:08.815 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-25 00:11:08.989 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:11:08.990 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 174.7276ms
+2022-01-25 00:11:08.990 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:11:08.990 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=older - - - 200 - application/json;+charset=utf-8 179.0155ms
+2022-01-25 00:11:13.509 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=lower - -
+2022-01-25 00:11:13.509 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:11:13.509 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-25 00:11:13.714 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:11:13.715 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 204.9873ms
+2022-01-25 00:11:13.715 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:11:13.715 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=lower - - - 200 - application/json;+charset=utf-8 206.4044ms
+2022-01-25 00:11:25.386 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - -
+2022-01-25 00:11:25.386 -05:00 [INF] Executing endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:11:25.387 -05:00 [INF] Route matched with {action = "GetCustomerOrders", controller = "Customer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Models.Order] GetCustomerOrders(System.String, System.String) on controller WebAPI.Controllers.CustomerController (WebAPI).
+2022-01-25 00:11:25.560 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Order, YarnModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-25 00:11:25.561 -05:00 [INF] Executed action WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI) in 174.2486ms
+2022-01-25 00:11:25.561 -05:00 [INF] Executed endpoint 'WebAPI.Controllers.CustomerController.GetCustomerOrders (WebAPI)'
+2022-01-25 00:11:25.562 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7165/api/Customer/orders sorted with Customer Cynthia?sort=higher - - - 200 - application/json;+charset=utf-8 175.5235ms
