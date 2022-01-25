@@ -69,6 +69,7 @@ namespace WebAPI.Controllers
         public ActionResult<Customer> Get(string name)
         {
             Customer foundCust = _bl.GetCustomerbyName(name);
+            foundCust.Orders = _bl.GetOrdersbyCustomerName(name);
             int CustomerID = foundCust.ID;
             //foundCust.Orders = _bl.GetOrder
             if (foundCust.ID != 0)
